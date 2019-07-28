@@ -1,114 +1,208 @@
 <!DOCTYPE html>
 <html>
     <title>Jack Daly Designs</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,h1 {font-family: "Raleway", Arial, sans-serif}
-        h1 {letter-spacing: 6px}
-        .w3-row-padding img {margin-bottom: 12px}
-    </style>
     <head>
-    <meta name="google-site-verification" content="Xqk3CM1HJZEZCDa0nlXTaQcL9kkeXVTLsz7cPizoIcY" />
-    <meta name="p:domain_verify" content="1d7c7649ba06a69bd9073eab557193f0"/>
-        
-        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+
+
+        <meta name="google-site-verification" content="Xqk3CM1HJZEZCDa0nlXTaQcL9kkeXVTLsz7cPizoIcY" />
+        <meta name="p:domain_verify" content="1d7c7649ba06a69bd9073eab557193f0"/>
+
     </head>
-    
-    
-    <body>
+    <body onload="myFunction()" style="margin:0;">
+        <div id="loader"></div>
+        <div style="display:none;" id="myDiv" class="animate-bottom">
 
-        <!-- !PAGE CONTENT! -->
-        <div class="w3-content" style="max-width:1500px">
 
-            <!-- Header -->
 
-            <div class="w3-display-container">
-                <div class="w3-panel w3-center  " style="padding:10% 5%">
-                <div class="w3-display-middle w3-large">
-                    <img src="images/profile.JPG" class="w3-circle" alt="Me" style="width:40%">
+            <body>
 
-                </div>
-                </div>
-            </div>
+                <!-- !PAGE CONTENT! -->
+                <div class="w3-content" style="max-width:1500px">
 
-                
-                <header class="w3-panel w3-center w3-opacity" style="padding:16px 16px">
+                    <!-- Header -->
 
-                    <h1 class="w3-xlarge">DESIGNER</h1>
-                    <h1>Jack Daly</h1>
-                    <div class="w3-padding-32 w3-xxlarge " >
-                        
-                        <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity "  > </i> </a>
+                    <div class="header; w3-display-container">
+                        <div class="w3-panel w3-center  " style="padding:10% 5%">
+                            <div class="w3-display-middle w3-large">
+                                <img src="images/profile.JPG" class="w3-circle" alt="Me" style="width:40%">
 
-                        <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity "></i> </a> 
-
-                        <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity "></i> </a>   
-
-                        <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity "></i> </a>
-
-                        <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity "></i> </a>  
-                        
+                            </div>
+                        </div>
                     </div>
 
 
+                    <header class="w3-panel w3-center w3-opacity" style="padding:16px 16px">
+                        <!-- !START OF SLIDE SHOW! -->
+                        <h1 class="w3-xlarge">i am a  </h1>
 
-                    <div class="w3-padding-32">
-                        <div class="w3-bar w3-border">
-                            <a href="#" class="w3-bar-item w3-button">Home</a>
-                            <a href="#" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
-                            <a href="#" class="w3-bar-item w3-button">Contact</a>
+                        <div class="w3-content" style="max-width:400px">
+                            <div class="mySlides ">
+                                <h1 class="w3-xlarge">MACHINIST</h1>
+                            </div>
+                            <div class="mySlides">
+                                <h1 class="w3-xlarge">DESIGNER</h1>
+                            </div>
+                            <div class="mySlides ">
+                                <h1 class="w3-xlarge">GINGERNEER</h1>
+                            </div>
+                            <div class="mySlides">
+                                <h1 class="w3-xlarge">STUDENT</h1>
+                            </div>
+                            <div class="mySlides ">
+                                <h1 class="w3-xlarge">MAKER</h1>
+                            </div>
+                            <div class="mySlides">
+                                <h1 class="w3-xlarge">PROGRAMMER</h1>
+                            </div>
+                        </div>
+                        <h1 class="w3-xlarge">I am   </h1>
+                        <h1>Jack Daly</h1>
+                        <script>
+                            var slideIndex = 0;
+                            carousel();
+
+                            function carousel() {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none"; 
+                                }
+                                slideIndex++;
+                                if (slideIndex > x.length) {slideIndex = 1} 
+                                x[slideIndex-1].style.display = "block"; 
+                                setTimeout(carousel, 3000); 
+                            }
+                        </script>
+
+
+
+
+                        <!-- !END OF SLIDE SHOW! -->
+
+                        <div class="w3-padding-32 w3-xxlarge " >
+
+                            <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity "  > </i> </a>
+
+                            <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity "></i> </a> 
+
+                            <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity "></i> </a>   
+
+                            <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity "></i> </a>
+
+                            <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity "></i> </a>  
+
                         </div>
 
 
+
+                        <div class="w3-padding-32">
+                            <div class="w3-bar w3-border">
+                                <a href="#" class="w3-bar-item w3-button">Home</a>
+                                <a href="#" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
+                                <a href="#" class="w3-bar-item w3-button">Contact</a>
+                            </div>
+
+
+                        </div>
+
+                    </header>
+
+                    <!-- Photo Grid -->
+                    <div class="w3-row-padding" style="margin-bottom:128px">
+                        <div class="w3-half">
+                            <img src="images/cncshoe%20(3).png" style="width:100%">
+                            <img src="images/drawing (1).jpg" style="width:100%">
+                            <img src="images/render%20(2).png" style="width:100%">
+                            <img src="images/drawing (2).jpg" style="width:100%">
+                            <img src="images/render%20(1).png" style="width:100%">
+                            <img src="images/drawing (6).jpg" style="width:100%">
+
+
+
+                        </div>
+
+                        <div class="w3-half">
+                            <img src="images/drawing (3).jpg" style="width:100%">
+                            <img src="images/cncshoe%20(2).png" style="width:100%">
+                            <img src="images/drawing (4).jpg" style="width:100%">
+                            <img src="images/render%20(3).png" style="width:100%">
+                            <img src="images/drawing (5).jpg" style="width:100%">
+                            <img src="images/cncshoe%20(1).png" style="width:100%">
+                        </div>
                     </div>
-
-                </header>
-
-                <!-- Photo Grid -->
-                <div class="w3-row-padding" style="margin-bottom:128px">
-                    <div class="w3-half">
-                        <img src="images/cncshoe%20(3).png" style="width:100%">
-                        <img src="images/drawing (1).jpg" style="width:100%">
-                        <img src="images/render%20(2).png" style="width:100%">
-                        <img src="images/drawing (2).jpg" style="width:100%">
-                        <img src="images/render%20(1).png" style="width:100%">
-                        <img src="images/drawing (6).jpg" style="width:100%">
-
-
-                        
+                <!-- Contact -->
+                <div class="container">
+                    <div style="text-align:center">
+                        <h1>Contact Me</h1>
+                        <p>Swing by for a cup of coffee, or leave us a message:</p>
                     </div>
+                    <div class="row" align="center" style="padding: 100px" >
 
-                    <div class="w3-half">
-                         <img src="images/drawing (3).jpg" style="width:100%">
-                        <img src="images/cncshoe%20(2).png" style="width:100%">
-                        <img src="images/drawing (4).jpg" style="width:100%">
-                        <img src="images/render%20(3).png" style="width:100%">
-                        <img src="images/drawing (5).jpg" style="width:100%">
-                                                <img src="images/cncshoe%20(1).png" style="width:100%">
+
+                            <form action="form.php" method="post">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                <label for="country">Country</label>
+                                <select id="country" name="country">
+                                    <option value="australia">Australia</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="usa">USA</option>
+                                </select>
+                                <label for="subject">Subject</label>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                                <input type="submit" value="Submit">
+                            </form>
+
                     </div>
                 </div>
+                    <!-- End Page Content -->
+                </div>
 
-                <!-- End Page Content -->
-            </div>
+                <!-- Footer -->
+                <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+                    <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity" > </i> </a>
 
-            <!-- Footer -->
-            <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
-                <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity" > </i> </a>
+                    <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity"></i> </a> 
 
-                <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity"></i> </a> 
+                    <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity"></i> </a>   
 
-                <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity"></i> </a>   
+                    <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity"></i> </a>
 
-                <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity"></i> </a>
+                    <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>  
+                    │ Designed by Daly Industries
 
-                <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>  
-│ Designed by Daly Industries
+                </footer>
 
-            </footer>
-            
+
+                <script>
+                    var myVar;
+
+                    function myFunction() {
+                        myVar = setTimeout(showPage, 1000);
+                    }
+
+                    function showPage() {
+                        document.getElementById("loader").style.display = "none";
+                        document.getElementById("myDiv").style.display = "block";
+                    }
+                </script>
+
+
+
+
+
+
+
             </body>
-        </html>
+        </div>
+    </body>
+</html>
