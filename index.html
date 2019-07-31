@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="stylesheet.css" rel="stylesheet" type="text/css">
+        <link href="hamburgers.css" rel="stylesheet">
+        <link href="contact/style.css" rel="stylesheet">
 
 
         <meta name="google-site-verification" content="Xqk3CM1HJZEZCDa0nlXTaQcL9kkeXVTLsz7cPizoIcY" />
@@ -22,256 +24,446 @@
 
             gtag('config', 'UA-144850694-1');
         </script>
-
-
-
     </head>
-    <body onload="myFunction()" style="margin:0;">
-        <div id="loader"></div>
-        <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 
 
 
-            <body>
+    <div style="text-align: center">
+        <body onload="myFunction()" style="display: inline-block">
+            <div id="loader"></div>
+            <div style="display:none;" id="myDiv" class="animate-bottom">
 
-                <!-- !PAGE CONTENT! -->
-                <div class="w3-content" style="max-width:1500px">
 
-                    <!-- Header -->
+                <body>
 
-                    <div class="header; w3-display-container">
-                        <div class="w3-panel w3-center  " style="padding:10% 5%">
-                            <div class="w3-display-middle w3-large">
-                                <img src="images/profile.JPG" class="w3-circle" alt="Me" style="width:40%">
+
+
+
+                    <!-- !PAGE CONTENT! -->
+
+
+                    <div id="main" style="margin: 0 auto;">
+                        <div  id="header">
+
+
+                            <div id="float-button">
+                                <button class="hamburger hamburger--slider " type="button"  >
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner "></span>
+                                    </span>
+                                </button>  
+                                <script>
+                                    // Look for .hamburger
+                                    var hamburger = document.querySelector(".hamburger");
+
+                                    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+                                    closeNav();
+                                </script>
+
+                            </div>
+
+                            <!--     </div>-->
+
+
+
+
+
+
+                            <div class="w3-content" style="max-width:1500px " >
+
+                                <!-- START OF HEADER -->
+
+
+                                <!-- side bar -->
+
+                                <script>
+                                    function openNav() {
+                                        hamburger.classList.add("is-active");
+                                        document.getElementById("mySidenav").style.width = "250px";
+                                        document.getElementById("main").style.marginLeft = "250px";
+
+                                        document.getElementById("float-button").style.left = "170px";
+                                    }
+
+                                    function closeNav() {
+                                        hamburger.classList.remove("is-active");
+                                        document.getElementById("mySidenav").style.width = "0";
+                                        document.getElementById("main").style.marginLeft= "0";
+                                        document.getElementById("float-button").style.left = "25px";
+                                    }
+
+                                </script>
+
+                                <div id="mySidenav" class="sidenav">
+                                    <a href="#about">About</a>
+                                    <a href="#portfolio">Portfolio</a>
+                                    <a href="#contact">Contact</a>
+
+                                </div>
+
+
+
+
+                                <!-- end side bar-->
+
+                                <div class="header; w3-display-container" id="home">
+                                    <div class="w3- w3-center  " style="padding:10% 5%">
+                                        <div class="w3-display-middle w3-large">
+                                            <img src="images/profile.JPG" class="w3-circle" alt="Me" style="width:40%">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1>Jack Daly</h1>
+                                <header class="w3-panel w3-center w3-opacity" style="padding:16px 16px">
+
+                                    <!-- !START OF SLIDE SHOW! -->
+                                    <h1 class="w3-xlarge">I am a  </h1>
+
+                                    <div class="w3-content" style="max-width:400px">
+                                        <div class="mySlides ">
+                                            <h1 class="w3-xlarge">MACHINIST</h1>
+                                        </div>
+                                        <div class="mySlides">
+                                            <h1 class="w3-xlarge">DESIGNER</h1>
+                                        </div>
+                                        <div class="mySlides ">
+                                            <h1 class="w3-xlarge">GINGERNEER</h1>
+                                        </div>
+                                        <div class="mySlides">
+                                            <h1 class="w3-xlarge">STUDENT</h1>
+                                        </div>
+                                        <div class="mySlides ">
+                                            <h1 class="w3-xlarge">MAKER</h1>
+                                        </div>
+                                        <div class="mySlides">
+                                            <h1 class="w3-xlarge">PROGRAMMER</h1>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        var slideIndex = 0;
+                                        carousel();
+
+                                        function carousel() {
+                                            var i;
+                                            var x = document.getElementsByClassName("mySlides");
+                                            for (i = 0; i < x.length; i++) {
+                                                x[i].style.display = "none"; 
+                                            }
+                                            slideIndex++;
+                                            if (slideIndex > x.length) {slideIndex = 1} 
+                                            x[slideIndex-1].style.display = "block"; 
+                                            setTimeout(carousel, 3000); 
+                                        }
+                                    </script>
+
+
+
+                                    <p>Find me around the web below:</p>
+                                    <!-- !END OF SLIDE SHOW! -->
+
+                                    <div class="w3-padding-16 w3-xxlarge "  >
+
+                                        <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">
+                                            <i class="fa fa-facebook-official w3-hover-opacity " id="socialicon" > </i>
+                                        </a>
+
+                                        <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  
+                                            <i class="fa fa-instagram w3-hover-opacity " id="socialicon" ></i> </a> 
+
+                                        <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity "id="socialicon" ></i> </a>   
+
+                                        <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity "id="socialicon" ></i> </a>
+
+                                        <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/" >  <i class="fa fa-linkedin w3-hover-opacity "id="socialicon" ></i> </a>  
+
+                                    </div>
+
+
+
+                                    <div class="w3-padding-32">
+                                        <div class="w3-bar w3-border">
+                                            <a href="#home" class="w3-bar-item w3-button">Home</a>
+                                            <a href="#about" class="w3-bar-item w3-button">About</a>
+                                            <a href="#portfolio" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
+                                            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </header>
+                            </div>
+                        </div>
+
+
+                        <!-- END OF HEADER -->
+<hr>
+                        <!-- ABOUT SECTION -->
+                        <div id="about" class="w3-container">
+
+
+
+
+
+
+                            <!-- Container (About Section) -->
+                            <div class="w3-content w3-container w3-padding-64" id="about">
+                                <h2 class="w3-center">ABOUT ME</h2>
+                                <p class="w3-center"><em>Hybrid Designer, programmer and ginger.</em></p>
+                                <div class="w3-row">
+                                    <div class="w3-col m6 w3-center w3-padding-large">
+                                        <p><b><i class="fa fa-user w3-margin-right"></i>Jack Daly</b></p><br>
+                                        <img src="images/profile.JPG" class="w3-circle" alt="Me"  id="profilepic">
+                                    </div>
+
+
+                                    <div class="w3-col m6  w3-padding-large">
+                                        <p>I label myself as a hybrid designer, but what does that mean? Well, I have a wide range of skills, ranging from making and programming robots and websites to graphic and product design - with both CAD & CAM knowledge sandwiched in between them. I love designing products and ave the ability to integrate all 3 pillars of design - resistant materials, graphics and electronics. </p>
+                                        <p>I'm a 16-year-old ginger. During the day I am hiding in the shade at school studying and at night I'm tinkering in my workshop doing personal and freelance projects.</p>
+                                        <button class="button button5" ><a href="Coming_Soon.html" style="text-decoration:none">Find Out More</a></button>
+                                    </div>
+                                </div>
+                                <h1 class=" w3-center w3-padding-16">Skill Set</h1>
+                                <h3 class="w3-large w3-center w3-padding-16">Product Design</h3>
+                                <p class="w3-wide"><i class="fa fa-cogs"></i> Fusion 360 - CAD & CAM</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+                                </div>
+                                <p class="w3-wide"><i class="fa fa-file-code-o"></i> Programming - C#/Arduino - Python</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+                                </div>
+                                <p class="w3-wide"><i class="fa fa-file-code-o"></i> Design - Creating a product</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+                                </div>
+                                <h3 class="w3-large w3-center w3-padding-16">Graphic Design</h3>
+                                <p class="w3-wide"><i class="fa fa-photo"></i> Photoshop</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+                                </div>
+                                <p class="w3-wide"><i class="fa fa-pencil"></i> Illustrator</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+                                </div>
+                                <p class="w3-wide"><i class="fa fa-file-pdf-o"></i> InDesign</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
+                                </div>
+                                <h3 class="w3-large w3-center w3-padding-16">Misc</h3>
+                                <p class="w3-wide"><i class="fa fa-film"></i> Adobe Premiere Pro</p>
+                                <div class="w3-light-grey">
+                                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:65%">65%</div>
+                                </div>
+
+
+                            </div>
+
+                            
+
+
+                        </div>
+                        <hr>
+
+                        <!-- END ABOUT -->
+
+                        <!-- Photo Grid -->
+                        <h2 class="w3-center">Portfolio</h2>
+                        <div class="w3-row-padding " style="margin-bottom:128px padding:200px " id= "portfolio">
+                            <div class="w3-half" style=" padding: 0px 0px 0px 10% ">
+                                <div class="container" >
+                                    <img src="images/cncshoe%20(3).png" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>CNC DUST SHOE</h2>
+                                            <p> Designed and Rendered in Fusion360</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/drawing (1).jpg" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Drawing Pratice</h2>
+                                            <p> Shading using a plug</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <img src="images/render%20(2).png" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Auto Fish Feeder</h2>
+                                            <p> An automatic Fish feeder that uses an RTC to feed fish on a timely bases</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/drawing (2).jpg" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Orthographic</h2>
+                                            <p>Understanding different drawing techniques is key to being a good designer</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/render%20(1).png" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Rendering</h2>
+                                            <p>Learning to use light in Fusion360 render environment</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/drawing (6).jpg" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Perspective</h2>
+                                            <p>Perspective is the most common drawing technique, so it made sense to try it out</p></div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="w3-half" style=" padding: 0px 10% 0px 0px ">
+
+                                <div class="container">
+                                    <img src="images/drawing (3).jpg" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>More Orthographic</h2>
+                                            <p></p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/cncshoe%20(2).png" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>CNC Shoe</h2>
+                                            <p>A Close up of the CNC Shoe for the chinese CNC Mill</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/drawing (5).jpg" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Variety is the Spice of life</h2>
+                                            <p>adding multiple techniques to create and show the ideation process</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/render%20(3).png" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Render</h2>
+                                            <p>... of my logo</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/drawing (4).jpg" style="width:100%"  class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>More Shading</h2>
+                                            <p>Shading, its the key to life</p></div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <img src="images/cncshoe%20(1).png" style="width:100%" class="image">
+                                    <div class="overlay">
+                                        <div class="text"><h2>Lights</h2>
+                                            <p></p></div>
+                                    </div>
+                                </div>                            
+
 
                             </div>
                         </div>
-                    </div>
-                    <h1>Jack Daly</h1>
 
-                    <header class="w3-panel w3-center w3-opacity" style="padding:16px 16px">
-                        <!-- !START OF SLIDE SHOW! -->
-                        <h1 class="w3-xlarge">I am a  </h1>
 
-                        <div class="w3-content" style="max-width:400px">
-                            <div class="mySlides ">
-                                <h1 class="w3-xlarge">MACHINIST</h1>
-                            </div>
-                            <div class="mySlides">
-                                <h1 class="w3-xlarge">DESIGNER</h1>
-                            </div>
-                            <div class="mySlides ">
-                                <h1 class="w3-xlarge">GINGERNEER</h1>
-                            </div>
-                            <div class="mySlides">
-                                <h1 class="w3-xlarge">STUDENT</h1>
-                            </div>
-                            <div class="mySlides ">
-                                <h1 class="w3-xlarge">MAKER</h1>
-                            </div>
-                            <div class="mySlides">
-                                <h1 class="w3-xlarge">PROGRAMMER</h1>
-                            </div>
+                        <!-- End Page Content -->
+
+
+
+                        <!-- Conatct SECTION -->
+                        <div id="contact" class="w3-container w3-light-gray w3-padding-64 " style="width="100%>
+
+                            <div class="w3-content w3-container " id="about">
+                                <h2 class="w3-center">CONTACT ME</h2>
+                                <p class="w3-center"><em>Want to collaborate or just leaving a message? MY details are below!</em></p>
+
+                                <div class="w3-half">
+                                <h3>Email:</h3>
+                                </div>
+                                <div class="w3-half">
+                                <h3>JackDalyDesigns@gmail.com</h3>
+                                </div>
+        
+                                </div>
                         </div>
+
+
+
+
+
+                        <!-- Footer -->
+                        <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+                            <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity" > </i> </a>
+
+                            <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity"></i> </a> 
+
+                            <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity"></i> </a>   
+
+                            <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity"></i> </a>
+
+                            <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>  
+                            │ Designed by Daly Industries
+
+                        </footer>
+
 
                         <script>
-                            var slideIndex = 0;
-                            carousel();
+                            var myVar;
 
-                            function carousel() {
-                                var i;
-                                var x = document.getElementsByClassName("mySlides");
-                                for (i = 0; i < x.length; i++) {
-                                    x[i].style.display = "none"; 
-                                }
-                                slideIndex++;
-                                if (slideIndex > x.length) {slideIndex = 1} 
-                                x[slideIndex-1].style.display = "block"; 
-                                setTimeout(carousel, 3000); 
+                            function myFunction() {
+                                myVar = setTimeout(showPage, 1000);
+                            }
+
+                            function showPage() {
+                                document.getElementById("loader").style.display = "none";
+                                document.getElementById("myDiv").style.display = "block";
                             }
                         </script>
 
 
 
-                        <p>Find me around the web below:</p>
-                        <!-- !END OF SLIDE SHOW! -->
-
-                        <div class="w3-padding-16 w3-xxlarge " >
-
-                            <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity "  > </i> </a>
-
-                            <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity "></i> </a> 
-
-                            <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity "></i> </a>   
-
-                            <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity "></i> </a>
-
-                            <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity "></i> </a>  
-
-                        </div>
 
 
-
-                        <div class="w3-padding-32">
-                            <div class="w3-bar w3-border">
-                                <a href="index.html" class="w3-bar-item w3-button">Home</a>
-                                <a href="Coming_Soon.html" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
-                                <a href="Coming_Soon.html" class="w3-bar-item w3-button">Contact</a>
-                            </div>
-
-
-                        </div>
-
-                    </header>
-
-                    <!-- Photo Grid -->
-                    <div class="w3-row-padding" style="margin-bottom:128px">
-                        <div class="w3-half">
-                            <div class="container">
-                                <img src="images/cncshoe%20(3).png" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>CNC DUST SHOE</h2>
-                                        <p> Designed and Rendered in Fusion360</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/drawing (1).jpg" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Drawing Pratice</h2>
-                                        <p> Shading using a plug</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="container">
-                                <img src="images/render%20(2).png" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Auto Fish Feeder</h2>
-                                        <p> An automatic Fish feeder that uses an RTC to feed fish on a timely bases</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/drawing (2).jpg" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Orthographic</h2>
-                                        <p>Understanding different drawing techniques is key to being a good designer</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/render%20(1).png" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Rendering</h2>
-                                        <p>Learning to use light in Fusion360 render environment</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/drawing (6).jpg" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Perspective</h2>
-                                        <p>Perspective is the most common drawing technique, so it made sense to try it out</p></div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                        <div class="w3-half">
-
-                            <div class="container">
-                                <img src="images/drawing (3).jpg" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>More Orthographic</h2>
-                                        <p></p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/cncshoe%20(2).png" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>CNC Shoe</h2>
-                                        <p>A Close up of the CNC Shoe for the chinese CNC Mill</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/drawing (5).jpg" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Variety is the Spice of life</h2>
-                                        <p>adding multiple techniques to create and show the ideation process</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/render%20(3).png" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Render</h2>
-                                        <p>... of my logo</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/drawing (4).jpg" style="width:100%"  class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>More Shading</h2>
-                                        <p>Shading, its the key to life</p></div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <img src="images/cncshoe%20(1).png" style="width:100%" class="image">
-                                <div class="overlay">
-                                    <div class="text"><h2>Lights</h2>
-                                        <p></p></div>
-                                </div>
-                            </div>                            
-
-
-                        </div>
                     </div>
 
-
-
-                    <!-- End Page Content -->
-
-
-
-
-
-
-                </div>
-
-                <!-- Footer -->
-                <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
-                    <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">  <i class="fa fa-facebook-official w3-hover-opacity" > </i> </a>
-
-                    <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  <i class="fa fa-instagram w3-hover-opacity"></i> </a> 
-
-                    <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p w3-hover-opacity"></i> </a>   
-
-                    <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity"></i> </a>
-
-                    <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/">  <i class="fa fa-linkedin w3-hover-opacity"></i> </a>  
-                    │ Designed by Daly Industries
-
-                </footer>
-
-
-                <script>
-                    var myVar;
-
-                    function myFunction() {
-                        myVar = setTimeout(showPage, 1000);
-                    }
-
-                    function showPage() {
-                        document.getElementById("loader").style.display = "none";
-                        document.getElementById("myDiv").style.display = "block";
-                    }
-                </script>
-
-
-
-
-
-
-
-            </body>
-        </div>
-    </body>
+                </body>
+            </div>
+        </body>
+    </div>
 </html>

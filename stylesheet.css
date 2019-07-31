@@ -1,162 +1,373 @@
 <style>
-            .mySlides {display:none;}
-            body,h1 {font-family: "Raleway", Arial, sans-serif}
-            h1 {letter-spacing: 6px}
-            .w3-row-padding img {margin-bottom: 12px}
+.mySlides {display:none;}
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
 
-            /* Center the loader */
-            #loader {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                z-index: 1;
-                width: 150px;
-                height: 150px;
-                margin: -75px 0 0 -75px;
-                border: 2px solid #f3f3f3;
-                border-radius: 50%;
-                border-top: 2px solid #3498db;
-                width: 120px;
-                height: 120px;
-                -webkit-animation: spin 1s linear infinite;
-                animation: spin 1s linear infinite;
+/* Center the loader */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
 
-            }
+}
 
-            @-webkit-keyframes spin {
-                0% { -webkit-transform: rotate(0deg); }
-                100% { -webkit-transform: rotate(360deg); }
-            }
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
 
-            @keyframes spin {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
-            /* Add animation to "page content" */
-            .animate-bottom {
-                position: relative;
-                -webkit-animation-name: animatebottom;
-                -webkit-animation-duration: 1s;
-                animation-name: animatebottom;
-                animation-duration: 1s
-            }
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
 
-            @-webkit-keyframes animatebottom {
-                from { bottom:-100px; opacity:0 } 
-                to { bottom:0px; opacity:1 }
-            }
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
 
-            @keyframes animatebottom { 
-                from{ bottom:-100px; opacity:0 } 
-                to{ bottom:0; opacity:1 }
-            }
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
 
-            #myDiv {
-                display: none;
-                text-align: center;
-            }
-        </style>
+#myDiv {
+    display: none;
+    text-align: center;
+}
+</style>
 
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Style inputs */
 input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 /* Style the container/contact section */
 .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 10px;
 }
 
 /* Create two columns that float next to eachother */
 .column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 .container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .image {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #3498db;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #3498db;
 
 }
 
 .container:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-    
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#socialicon:hover { 
+    position:relative;
+    transform: translate(0, -25%);
+    transition: all .2s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#home {
+
+}
+
+#portfolio {
+
+}
+#contact {
+
+}
+#about {
+
+}
+
+/* side bar */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #3498db;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .8s;
+    padding: 16px;
+    margin-top: 60px
+}
+#float-button {
+    z-index: 2;
+    overflow: hidden;
+    transition: all 1s;
+
+    left: 25px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 5px; /* Position the navbar at the top of the page */
+
+}
+:focus {
+outline: 0;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/* side bar */
+
+
+/* HEADER 
+#header {
+top: 0;
+position: fixed;
+text-align: center;
+transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
+*/
+
+
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.icon-background {
+    color: #c0ffc0;
 }
 
 
 
+.circle-responsive {
+    background: #ddd;
+    border-radius: 50%;
+    height: 0;
+    padding-bottom: 5%;
+    width: 5%;
+    position: sticky;
+    top: 0;
 
+
+}
+
+
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+.php {width: 60%; background-color: #808080;} /* Dark Grey */
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 1.5%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3498db; 
+}
+
+
+
+#profilepic{
+    width: 90%;
+    padding: 10px
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
