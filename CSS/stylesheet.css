@@ -91,14 +91,13 @@ input[type=submit]:hover {
     background-color: #ffffff;
     padding: 10px;
 }
-
 /* Create two columns that float next to eachother */
 .column {
     float: left;
     width: 50%;
     margin-top: 6px;
     padding: 20px;
-            background-color: #fff;
+    background-color: #fff;
 }
 
 /* Clear floats after the columns */
@@ -106,7 +105,7 @@ input[type=submit]:hover {
     content: "";
     display: table;
     clear: both;
-            background-color: #fff;
+    background-color: #fff;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -114,14 +113,14 @@ input[type=submit]:hover {
     .column, input[type=submit] {
         width: 100%;
         margin-top: 0;
-                background-color: #fff;
+        background-color: #fff;
     }
 }
 
 .container {
     position: relative;
     width: 100%;
-        background-color: #fff;
+    background-color: #fff;
 }
 
 .image {
@@ -141,19 +140,19 @@ input[type=submit]:hover {
     opacity: 0;
     transition: .5s ease;
     background-color: #3498db;
-        z-index: 2;
+    z-index: 2;
     transform: scale(1);
-    
+
 
 }
 .overlay-image{}
 .overlay-image:hover {
 
     transition: .5s ease;
-        z-index: 3;
+    z-index: 3;
     transform: scale(1.5);
-/*       transform: translate(0, -5%);
-*/
+    /*       transform: translate(0, -5%);
+    */
 }
 
 .container:hover .overlay {
@@ -177,7 +176,7 @@ input[type=submit]:hover {
     position:relative;
     transform: translate(0, -25%);
     transition: all .2s ease;
-        color: #3498db;
+    color: #3498db;
 }
 
 html {
@@ -244,14 +243,14 @@ html {
     z-index: 2;
     overflow: hidden;
     transition: all 1s;
-        color: #3498db;
+    color: #3498db;
     left: 25px;
     position: fixed; /* Set the navbar to fixed position */
     top: 5px; /* Position the navbar at the top of the page */
 
 }
 :focus {
-outline: 0;
+    outline: 0;
 }
 
 @media screen and (max-height: 450px) {
@@ -318,22 +317,22 @@ transition: 0.2s; /* Add a transition effect (when scrolling - and font size is 
 
 /* width */
 ::-webkit-scrollbar {
-  width: 1.5%;
+    width: 1.5%;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+    background: #f1f1f1; 
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+    background: #888; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #3498db; 
+    background: #3498db; 
 }
 
 
@@ -345,46 +344,199 @@ transition: 0.2s; /* Add a transition effect (when scrolling - and font size is 
 
 
 .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .button5 {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
 }
 
 .button5:hover {
-  background-color: #555555;
-  color: white;
+    background-color: #555555;
+    color: white;
 }
 
 .bg {
-  /* The image used */
-  background-image: url("bg.jpg");
+    /* The image used */
+    background-image: url("bg.jpg");
 
-  /* Full height */
-  height: 100%; 
+    /* Full height */
+    height: 100%; 
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #gradient {
-      height: 100%;
-  width: 100%;
-  background-image: linear-gradient(180deg, #FFFFFF, #F1F1F1);
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, #FFFFFF, #F1F1F1);
+}
+
+
+
+
+
+/* Style the body */
+
+.hero {
+    padding: 60px;
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    background: url("images/profile2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+
+
+}
+.hero-text {
+    font-size: 4rem;
+    font-weight: 100;
+
+    color: white;
+}
+.hero-content {
+    position: relative;
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Content */
+/*----------------------------------------------------*/
+
+
+
+.module {
+    background: 
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1)
+        ),
+        url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+    width: 50%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+}
+.module > header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+}
+.module > header > h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 0 1px 0 black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    overflow: auto;  
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    background-color: black;
+}
+.row{
+    padding: 0.5% 1%;
+    
+}
+
+
+.textcont{
+    background-color: black;
+    padding: 1.5%;
+    width: 100%;
+    overflow: auto;  
+    height: 300px;
+    position: relative;
+    /*overflow: hidden;*/
+    
+
+ 
+
+}
+.textcont  > h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 0 1px 0 white;
+}
+
+
+
+.imgcont{
+    background: 
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 5)
+        ),
+        url('https://jackdaly.github.io/images/drawing (6).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.buttonproj {
+    background-color: transparent;
+    color: white;
+    align-content: center;
+    padding: 1%;
+    border: 3px solid white;
+
+}
+
+.buttonproj:hover {
+    background-color: #555555;
+
+    color: white;
 }
