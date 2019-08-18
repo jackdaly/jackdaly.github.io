@@ -464,14 +464,20 @@ body {
 
 /* Create two equal columns that floats next to each other */
 .column {
-    float: left;
+  border: 0px solid;
+
     width: 50%;
     padding: 0px;
     overflow: auto;  
-    height: 300px; /* Should be removed. Only for demonstration */
 }
 
-
+.containerproj{
+  width: 200%;
+  display: flex;
+  justify-content: center;    /* Change this */
+  flex-wrap: wrap;
+padding: 1%
+}
 
 
 /* Clear floats after the columns */
@@ -483,21 +489,28 @@ body {
 }
 .row{
     padding: 0.5% 1%;
+display: flex;
+
+  justify-content: center;    /* Change this */
+  flex-wrap: wrap;
     
 }
 
 
 .textcont{
+    flex: 1;
     background-color: black;
-    padding: 1.5%;
+    padding: 4%;
     width: 100%;
     overflow: auto;  
-    height: 300px;
+
     position: relative;
     /*overflow: hidden;*/
-    
 
- 
+
+
+
+
 
 }
 .textcont  > h1 {
@@ -509,6 +522,7 @@ body {
 
 
 .imgcont{
+
     background: 
         linear-gradient(
             to right,
@@ -520,7 +534,9 @@ body {
     background-size: cover;
     background-position: center;
     width: 100%;
+
     height: 100%;
+    
     position: relative;
     overflow: hidden;
 }
