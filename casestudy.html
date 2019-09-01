@@ -1,0 +1,854 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>casestudy</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="994de770-fb63-421a-bdbd-4d998b1dcc3f" class="page sans"><header><h1 class="page-title">Case Study Explained</h1><table class="properties"><tbody><tr class="property-row property-row-file"><th>Files</th><td></td></tr><tr class="property-row property-row-multi_select"><th>Tags</th><td></td></tr></tbody></table></header><div class="page-body"><h1 id="8d7b4d0e-e610-492d-b72a-c7b640e7055f" class="">Case Study Explained</h1><p id="b3d0c7b7-b211-4c91-9a4b-d7273764bd4d" class="">The code is split into 2 different different sections with 3 different corresponding sections. These sections or tasks can be accessed</p><pre id="f24ea683-a361-4de0-aae1-361ba175a3bb" class="code"><code>while True:
+    menuInput = input(print(&quot;----- Menu -----\n (1) Max Income \n (2) Book a Flight \n (3) See current bookings \n Enter a Value (1/2/3): &quot;))
+    if checkdigit(0,4,menuInput):
+        if menuInput == &#x27;1&#x27;:
+            maxIncome()
+        elif menuInput == &#x27;2&#x27;:
+            recordBooking()
+        elif menuInput == &#x27;3&#x27;:
+            print(day)
+        else:
+            print(&quot;enter valid input&quot;)</code></pre><p id="e5208e2f-6126-4582-813a-66a46e184c03" class="">Each task is split into a function which can be accessed through the menu.</p><h3 id="faab5094-e253-411c-8f7a-d47895be32a5" class="">Extra functions</h3><p id="25a15f36-eff8-4b04-8e6c-1cc09ff81da2" class="">As stated in the case study, each input had to be checked for errors. So i created an extra function called check digits:</p><pre id="420a129e-5340-4955-99e6-9a4ccdfd03be" class="code"><code>def checkdigit(rangelow, rangehigh, value):
+    if value.isdigit() and int(value) &lt; rangehigh and int(value) &gt; rangelow:
+        return True
+    else:
+        return  print(&quot;\n --- Error ---\nPlease enter a Number that is a Digit and is within Range \n -------------  \n&quot;)</code></pre><p id="9c883131-d2a2-4219-9ff9-97d153be6bff" class="">checkdigit takes the value and checks if it is in the specific range and if it is a integer. This was used throughout the code and was crucial as i was working with number inputs throughout, even in the menu.</p><h3 id="fc6c9d05-e007-439c-b5e0-95b3affe8b9e" class="">Task 1</h3><p id="889bfea1-b17b-4b30-946a-126714dc8584" class="">Can be accessed through pressing 1 into the menu and will lead you to this block of code</p><pre id="9917535b-414c-4b10-b223-5dad5290031d" class="code"><code>def maxIncome():
+    print(&quot;----- Max Income Function -----&quot;)
+    while True:
+        userPlane = input(print(&quot;Enter a plane (The corresponding number): \n (1) 2 Seater Plane \n (2) 4  Seater Plane \n (3) Historic Plane \n Enter a Value (1/2/3) :&quot;))
+        if checkdigit(0,4,userPlane):
+            while True:
+                userTime = input(print(&quot;Enter a plane (The corresponding number): \n (1) 30 Minutes \n (2) 60 Minutes \n Enter a Value (1/2) :&quot;))
+                if checkdigit(0,3,userTime):
+                    if userTime == &#x27;1&#x27;:
+                        if userPlane == &#x27;1&#x27;:
+                            print(&quot;The Maxium income for a 2 seater with flight times of 30 minutes would be $1000&quot;)
+                        elif userPlane == &#x27;2&#x27;:
+                            print(&quot;The Maxium income for a 4 seater with flight times of 30 minutes would be $1200&quot;)
+                        else:
+                            print(&quot;The Maxium income for a Historic with flight times of 30 minutes would be $3000&quot;)
+                    else:
+                        if userPlane == &#x27;1&#x27;:
+                            print(&quot;The Maxium income for a 2 seater with flight times of 60 minutes would be $1050&quot;)
+                        elif userPlane == &#x27;2&#x27;:
+                            print(&quot;The Maxium income for a 4 seater with flight times of 60 minutes would be $1400&quot;)
+                        else:
+                            print(&quot;The Maxium income for a Historic with flight times of 60 minutes would be $3500&quot;)
+                    break
+            break</code></pre><p id="47ca123b-e91d-4269-89f8-a7256ff0a9a8" class="">def macIncome(): defines the function and i begin with a print to format the output for the user</p><p id="e84c64b1-9155-4208-b3ab-b17725ee8c67" class="">Then using a while True to keep within a loop and to be able to use the break aspect so when the user got a value wrong it would loop back.</p><pre id="51b8326d-0aff-468a-b830-3bacd8b6e947" class="code"><code>userTime = input(print(&quot;Enter a plane (The corresponding number): \n (1) 30 Minutes \n (2) 60 Minutes \n Enter a Value (1/2) :&quot;))</code></pre><p id="59181545-ec14-48cb-9486-950cc269bee6" class="">The first input specfies to the user what plane they would like to enter to see the max income. Here each plane has a corresponding number allowing me to deal with integers. </p><pre id="0a330712-0890-4310-b8ce-468e89a83d60" class="code"><code>print(&quot;this is on the top line \n this is under the first line&quot;)</code></pre><p id="a8940ff1-0f57-4417-a55b-567bbe95907c" class="">Using the \n i was able to format the output into each different line to make it easier to read.</p><pre id="c472e18d-5607-4353-81ce-7a3114a51883" class="code"><code>if checkdigit(0,3,userTime):</code></pre><p id="bb1d853c-d126-4956-986f-b43b18d7a669" class="">As in my checkdigit function i return true for <em>its in range and a integer </em>and return false for <em>there is an error and output the error</em>. I was able to do it in a if statement. </p><pre id="b170f5fb-c2c1-45ab-880e-a2219076c0f2" class="code"><code>if userTime == &#x27;1&#x27;:
+      if userPlane == &#x27;1&#x27;:
+          print(&quot;The Maxium income for a 2 seater with flight times of 30 minutes would be $1000&quot;)
+      elif userPlane == &#x27;2&#x27;:
+          print(&quot;The Maxium income for a 4 seater with flight times of 30 minutes would be $1200&quot;)
+      else:
+          print(&quot;The Maxium income for a Historic with flight times of 30 minutes would be $3000&quot;)</code></pre><p id="41251d3f-f47a-4af8-96c3-710be2e40732" class="">The first block of code is simillar to the second and deals with the users input. If the user chose option one and focus on these types of options. If they chose plane 2, focus on that ouput. Then it will output the amount. </p><p id="16b282ad-0887-43b3-831e-34c15f5b8ccb" class=""><em>Looking back now, I did hardcode the output - instead i should have done a print with a format so i could automatically calculate the output so the client can change the prices and the price would change automatically.</em></p><p id="6b41fb72-f7de-42c3-8b4a-64611f271f20" class=""><strong>The second block of code is the same</strong></p><h3 id="6fe0b5ff-45d6-4ead-ae59-913076bfcb9f" class="">Task 2</h3><p id="d9abf53b-a2f1-4924-a21c-2f443f25a085" class="">Task 2 can be accessed through entering 2 in the menu:</p><pre id="4210b392-ea36-4901-9fb6-19f34ac919ae" class="code"><code>def recordBooking():
+    while True:
+        userPlane = input(print(&quot;\n Enter a plane (The corresponding number): \n (1) 2 Seater Plane \n (2) 4  Seater Plane \n (3) Historic Plane \n Enter a Value (1/2/3) :&quot;))
+        if checkdigit(0,4,userPlane):
+            check1 = False
+            while check1 == False:
+                userTime = input(print(&quot;\n Enter a plane (The corresponding number): \n (1) 30 Minutes \n (2) 60 Minutes \n Enter a Value (1/2) :&quot;))
+                if checkdigit(0,3,userTime):
+                    check1 = True#check booking duration to make sure all same type planes are on same duration
+                    if userTime == &#x27;1&#x27;:
+                            userTime = 50
+                    else:
+                        userTime= 100
+                    for i in range(len(day)):
+                        if int(day[i-1][0]) == int(userPlane) and int(day[i-1][1]) != int(userTime):
+                            print(&quot;\n USE DIFFERENT TIME \n&quot;)
+                            check1 = False
+                        else:
+                            print(&quot;\n --OK {} --&quot;.format(i + 1))	
+                    if check1:
+                        check2 = False
+                        while check2 == False:
+                            userBookTime = input(print(&quot;\n Enter a time (in the below Format): \n E.g. 1300 for 1:00 or 1450 for 2:30 (where 50 is half an hour) \n Enter the time) :&quot;))
+                            if checkdigit(799,1801,userBookTime) and int(userBookTime) % 50 == 0:
+                                check2 = True
+                                if day:
+                                    for i in range(len(day)):
+                                        usertimestart = int(userBookTime)
+                                        usertimeend = int(userBookTime) + int(userTime) + 50
+                                        if (int(usertimestart) &gt;= int(day[i][2]) and int(usertimestart) &lt; int(day[i][3])) or (int(usertimeend) &gt; int(day[i][2]) and int(usertimeend) &lt;= int(day[i][3])):
+                                            print(&quot;\n --BOOKING IS TAKEN-- \n&quot;)
+                                            check2 = False
+                                            
+                                        else:
+                                            endtime = int(userBookTime) + int(userTime) + 50
+                                            booking = [userPlane,userTime,userBookTime,endtime]
+                                            day.append(booking)
+                                            break
+                                else:
+                                    endtime = int(userBookTime) + int(userTime) + 50
+                                    booking = [userPlane,userTime,userBookTime,endtime]
+                                    day.append(booking)
+                            else:
+                                print(&quot;\n Number could also not be in format, e.g. 12:30 = 1250 as the 30 minutes is 50 \n&quot;)
+            break
+    task3()</code></pre><p id="733c6184-d677-4cb2-8c4a-f77267177a4b" class="">I begin with a while true to utilize the while true and break commands.</p><p id="f82a66f3-0710-44fc-af8a-430b437403aa" class="">I begin with asking the user to enter what plane they would like to book:</p><pre id="40b48a91-7eea-406c-aa92-8fb3e33f1111" class="code"><code>userPlane = input(print(&quot;\n Enter a plane (The corresponding number): \n (1) 2 Seater Plane \n (2) 4  Seater Plane \n (3) Historic Plane \n Enter a Value (1/2/3) :&quot;))
+        if checkdigit(0,4,userPlane):
+            check1 = False
+            while check1 == False:</code></pre><p id="cdbc3667-4f3c-4261-a8c2-0aa6836be557" class="">Here I use check digits with range 0,4 as I have 4 possible inputs instead of 2. I then use my checkdigit function to check the value and move on with a check1 = False. This is for the next question:</p><pre id="f32a0730-e2ab-4052-922e-203c8c2ab44b" class="code"><code>userTime = input(print(&quot;\n Enter a plane (The corresponding number): \n (1) 30 Minutes \n (2) 60 Minutes \n Enter a Value (1/2) :&quot;))
+                if checkdigit(0,3,userTime):
+                    check1 = True#check booking duration to make sure all same type planes are on same duration
+                    if userTime == &#x27;1&#x27;:
+                            userTime = 50
+                    else:
+                        userTime= 100
+                    for i in range(len(day)):
+                        if int(day[i-1][0]) == int(userPlane) and int(day[i-1][1]) != int(userTime):
+                            print(&quot;\n USE DIFFERENT TIME \n&quot;)
+                            check1 = False
+                        else:
+                            print(&quot;\n --OK {} --&quot;.format(i + 1))	
+                    if check1:</code></pre><p id="048a1ff3-625b-4273-a833-753a0d854b79" class="">Here the check 1 is used to check if we can move on with the booking or we have to reask the questions. if check 1 is true then we can move on to the timing part of the booking. Here i ask the question, check it and then set userTime to the correct value. i used 50 and 100 for ease of use when booking times in the next part. </p><pre id="d1fb2aa0-a07b-407c-840d-0e3f83e58b14" class="code"><code>for i in range(len(day)):
+                        if int(day[i-1][0]) == int(userPlane) and int(day[i-1][1]) != int(userTime):
+                            print(&quot;\n USE DIFFERENT TIME \n&quot;)
+                            check1 = False
+                        else:
+                            print(&quot;\n --OK {} --&quot;.format(i + 1))</code></pre><p id="25e4020e-568c-4df2-b6e2-8f286f53160f" class="">Here I check that the kind of plane the user entered has not been used before, and if it has what was the length of that flight. if the flight is the same, its ok, if not then we cannot move on and the user must enter a different time. This was stated in the brief.</p><pre id="7be77272-d2c8-42be-a7b7-60a66edbb6e7" class="code"><code>						if check1:
+                        check2 = False
+                        while check2 == False:
+                            userBookTime = input(print(&quot;\n Enter a time (in the below Format): \n E.g. 1300 for 1:00 or 1450 for 2:30 (where 50 is half an hour) \n Enter the time) :&quot;))
+                            if checkdigit(799,1801,userBookTime) and int(userBookTime) % 50 == 0:
+                                check2 = True
+                                if day:
+                                    for i in range(len(day)):
+                                        usertimestart = int(userBookTime)
+                                        usertimeend = int(userBookTime) + int(userTime) + 50
+                                        if (int(usertimestart) &gt;= int(day[i][2]) and int(usertimestart) &lt; int(day[i][3])) or (int(usertimeend) &gt; int(day[i][2]) and int(usertimeend) &lt;= int(day[i][3])):
+                                            print(&quot;\n --BOOKING IS TAKEN-- \n&quot;)
+                                            check2 = False
+                                            
+                                        else:
+                                            endtime = int(userBookTime) + int(userTime) + 50
+                                            booking = [userPlane,userTime,userBookTime,endtime]
+                                            day.append(booking)
+                                            break
+                                else:
+                                    endtime = int(userBookTime) + int(userTime) + 50
+                                    booking = [userPlane,userTime,userBookTime,endtime]
+                                    day.append(booking)
+                            else:
+                                print(&quot;\n Number could also not be in format, e.g. 12:30 = 1250 as the 30 minutes is 50 \n&quot;)
+            break</code></pre><p id="7a70f67a-6e2a-4804-8608-de414b02fb31" class="">firstly I set check 2 to be false, as opposed to when i did check 1 which was true. This was because I used a while False loop where if it the time is not taken, then the value turns to true and can then be run.</p><p id="20969bce-d010-4365-8dd1-6f49ae04897a" class=""><em>Inversing the trues and falses would most likely give the same results - its just the way i did it.</em></p><p id="421e087a-e60e-43d8-8472-e348f460f73b" class="">Here the user has to enter a time value. I use my check digit for a range between there opening hours and closing hours. I then use if day which checks, is there anything in the array? if not then dont worry your booking can be done, if there is, we need to check through it.</p><pre id="4ef7935d-b643-4c34-a427-e9eade95221f" class="code"><code>if checkdigit(799,1801,userBookTime) and int(userBookTime) % 50 == 0:
+		check2 = True
+   if day:
+       for i in range(len(day)):
+            usertimestart = int(userBookTime)
+            usertimeend = int(userBookTime) + int(userTime) + 50
+			       if (int(usertimestart) &gt;= int(day[i][2]) and int(usertimestart) &lt; int(day[i][3])) or (int(usertimeend) &gt; int(day[i][2]) and int(usertimeend) &lt;= int(day[i][3])):
+		             print(&quot;\n --BOOKING IS TAKEN-- \n&quot;)
+					       check2 = False
+                                            
+				   else:
+						    endtime = int(userBookTime) + int(userTime) + 50
+						    booking = [userPlane,userTime,userBookTime,endtime]
+						    day.append(booking)
+								break
+	else:
+	  endtime = int(userBookTime) + int(userTime) + 50
+	  booking = [userPlane,userTime,userBookTime,endtime]
+		day.append(booking)
+else:
+print(&quot;\n Number could also not be in format, e.g. 12:30 = 1250 as the 30 minutes is 50 \n&quot;)</code></pre><p id="b38a0be2-81b3-4108-84b5-93614eaeeec3" class="">I firstly ran through all the variables to make them integers, I did this with confidence as my check digit would have stopped strings. <em>and floats would be rounded. </em></p><p id="47ae1625-5b57-42fe-a3e6-912b6ddad44d" class="">I then did an if statement to check the time start was greater than or equal to the time start and more then the day end - <em>if the start was in the original start and end then it cant be booked. </em>or if the time end, which was calculated by the users choice, ended within the already booked times, it could not be booked. This took into account fuel times.</p><p id="0e4cf762-0513-4d69-aafb-5c0a5a3c516b" class="">I then called the task 3 function:</p><h3 id="20040223-0455-4ec2-baea-c15f9ac10036" class="">Task3()</h3><pre id="647b9036-4252-4478-ba78-d7cc914562b7" class="code"><code>def task3():
+    twoseatercost = 0; fourseatercost= 0; historic = 0
+    if day:
+        for i in range(len(day)):
+            if day[i][1] == 50:
+                if day[i][0] == &#x27;1&#x27;:
+                    twoseatercost =+ 100
+                if day[i][0] == &#x27;2&#x27;:
+                    fourseatercost =+ 120
+                if day[i][0] == &#x27;3&#x27;:
+                    historic =+ 300
+            else:
+                if day[i][0] == &#x27;1&#x27;:
+                    twoseatercost =+ 150
+                if day[i][0] == &#x27;2&#x27;:
+                    fourseatercost =+ 200
+                if day[i][0] == &#x27;3&#x27;:
+                    historic =+ 500
+        print(&quot;\n - \n Total money for the 2 seater plane were {} \n Total money for the 4 seater plane were {} \n Total money for the historic plane were {} \n The total Daily profit was {} \n - \n &quot;.format(twoseatercost,fourseatercost,historic, twoseatercost+fourseatercost+historic))
+    else:
+        print(&quot;No bookings&quot;)
+</code></pre><p id="3cd9fc0e-056e-4be1-8c9b-5572675903bc" class="">Using the if day to check there is something in the list; if there is not then it will return false. Then I go through the array (for i in range(len(day)) ). I then go through, firstly dividing each section by there times as different times mean different prices. I then split them on the user choice, 1 2 or 3. I then end the function off with a print with all of the bookings of each individual plane and total.</p><h1 id="f5dcdf9d-8256-43f6-a267-ab3020044284" class="">The whole code below:</h1><pre id="5dd543d7-2ac4-4bf0-b07b-96fb53cb5cc5" class="code"><code>day = []#[planetype, duration, Time start, Time end] #!-- Task 1 --!#
+if day:
+    print(&quot;something in it&quot;)
+else:
+    print(&quot;empty&quot;)
+def checkdigit(rangelow, rangehigh, value):
+    if value.isdigit() and int(value) &lt; rangehigh and int(value) &gt; rangelow:
+        return True
+    else:
+        return  print(&quot;\n --- Error ---\nPlease enter a Number that is a Digit and is within Range \n -------------  \n&quot;)
+    
+def maxIncome():
+    print(&quot;----- Max Income Function -----&quot;)
+    while True:
+        userPlane = input(print(&quot;Enter a plane (The corresponding number): \n (1) 2 Seater Plane \n (2) 4  Seater Plane \n (3) Historic Plane \n Enter a Value (1/2/3) :&quot;))
+        if checkdigit(0,4,userPlane):
+            while True:
+                userTime = input(print(&quot;Enter a plane (The corresponding number): \n (1) 30 Minutes \n (2) 60 Minutes \n Enter a Value (1/2) :&quot;))
+                if checkdigit(0,3,userTime):
+                    if userTime == &#x27;1&#x27;:
+                        if userPlane == &#x27;1&#x27;:
+                            print(&quot;The Maxium income for a 2 seater with flight times of 30 minutes would be $1000&quot;)
+                        elif userPlane == &#x27;2&#x27;:
+                            print(&quot;The Maxium income for a 4 seater with flight times of 30 minutes would be $1200&quot;)
+                        else:
+                            print(&quot;The Maxium income for a Historic with flight times of 30 minutes would be $3000&quot;)
+                    else:
+                        if userPlane == &#x27;1&#x27;:
+                            print(&quot;The Maxium income for a 2 seater with flight times of 60 minutes would be $1050&quot;)
+                        elif userPlane == &#x27;2&#x27;:
+                            print(&quot;The Maxium income for a 4 seater with flight times of 60 minutes would be $1400&quot;)
+                        else:
+                            print(&quot;The Maxium income for a Historic with flight times of 60 minutes would be $3500&quot;)
+                    break
+            break
+        
+def task3():
+    twoseatercost = 0; fourseatercost= 0; historic = 0
+    if day:
+        for i in range(len(day)):
+            if day[i][1] == 50:
+                if day[i][0] == &#x27;1&#x27;:
+                    twoseatercost =+ 100
+                if day[i][0] == &#x27;2&#x27;:
+                    fourseatercost =+ 120
+                if day[i][0] == &#x27;3&#x27;:
+                    historic =+ 300
+            else:
+                if day[i][0] == &#x27;1&#x27;:
+                    twoseatercost =+ 150
+                if day[i][0] == &#x27;2&#x27;:
+                    fourseatercost =+ 200
+                if day[i][0] == &#x27;3&#x27;:
+                    historic =+ 500
+        print(&quot;\n - \n Total money for the 2 seater plane were {} \n Total money for the 4 seater plane were {} \n Total money for the historic plane were {} \n The total Daily profit was {} \n - \n &quot;.format(twoseatercost,fourseatercost,historic, twoseatercost+fourseatercost+historic))
+    else:
+        print(&quot;No bookings&quot;)
+def recordBooking():
+    while True:
+        userPlane = input(print(&quot;\n Enter a plane (The corresponding number): \n (1) 2 Seater Plane \n (2) 4  Seater Plane \n (3) Historic Plane \n Enter a Value (1/2/3) :&quot;))
+        if checkdigit(0,4,userPlane):
+            check1 = False
+            while check1 == False:
+                userTime = input(print(&quot;\n Enter a plane (The corresponding number): \n (1) 30 Minutes \n (2) 60 Minutes \n Enter a Value (1/2) :&quot;))
+                if checkdigit(0,3,userTime):
+                    check1 = True#check booking duration to make sure all same type planes are on same duration
+                    if userTime == &#x27;1&#x27;:
+                            userTime = 50
+                    else:
+                        userTime= 100
+                    for i in range(len(day)):
+                        if int(day[i-1][0]) == int(userPlane) and int(day[i-1][1]) != int(userTime):
+                            print(&quot;\n USE DIFFERENT TIME \n&quot;)
+                            check1 = False
+                        else:
+                            print(&quot;\n --OK {} --&quot;.format(i + 1))	
+                    if check1:
+                        check2 = False
+                        while check2 == False:
+                            userBookTime = input(print(&quot;\n Enter a time (in the below Format): \n E.g. 1300 for 1:00 or 1450 for 2:30 (where 50 is half an hour) \n Enter the time) :&quot;))
+                            if checkdigit(799,1801,userBookTime) and int(userBookTime) % 50 == 0:
+                                check2 = True
+                                if day:
+                                    for i in range(len(day)):
+                                        usertimestart = int(userBookTime)
+                                        usertimeend = int(userBookTime) + int(userTime) + 50
+                                        if (int(usertimestart) &gt;= int(day[i][2]) and int(usertimestart) &lt; int(day[i][3])) or (int(usertimeend) &gt; int(day[i][2]) and int(usertimeend) &lt;= int(day[i][3])):
+                                            print(&quot;\n --BOOKING IS TAKEN-- \n&quot;)
+                                            check2 = False
+                                            
+                                        else:
+                                            endtime = int(userBookTime) + int(userTime) + 50
+                                            booking = [userPlane,userTime,userBookTime,endtime]
+                                            day.append(booking)
+                                            break
+                                else:
+                                    endtime = int(userBookTime) + int(userTime) + 50
+                                    booking = [userPlane,userTime,userBookTime,endtime]
+                                    day.append(booking)
+                            else:
+                                print(&quot;\n Number could also not be in format, e.g. 12:30 = 1250 as the 30 minutes is 50 \n&quot;)
+            break
+    task3()
+while True:
+    menuInput = input(print(&quot;----- Menu -----\n (1) Max Income \n (2) Book a Flight \n (3) See current bookings \n Enter a Value (1/2/3): &quot;))
+    if checkdigit(0,4,menuInput):
+        if menuInput == &#x27;1&#x27;:
+            maxIncome()
+        elif menuInput == &#x27;2&#x27;:
+            recordBooking()
+        elif menuInput == &#x27;3&#x27;:
+            print(day)
+        else:
+            print(&quot;enter valid input&quot;)</code></pre><p id="4f5ae9a0-0dd7-4a73-bef2-6a15cffb1e00" class="">— <em>111 lines of code with a menu system —</em></p><p id="baa6bcc1-a932-42fb-a56e-deb889cf1ae8" class="">
+</p></div></article></body></html>

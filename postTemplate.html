@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <title>Jack Daly Designs</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name=”description” content="Hybrid Designer, programmer and ginger, this is everything about me">
+        <!-- Global refernece -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Local refernece -->
+        <link href="CSS/stylesheet.css" rel="stylesheet" type="text/css">
+        <link href="CSS/hamburgers.css" rel="stylesheet">
+        <link href="CSS/w3.css" rel="stylesheet">
+        <link href="CSS/notion.css" rel="stylesheet">
+
+        <link rel="icon" href="blue.png" type="image/gif" sizes="16x16">
+
+        <!-- google verify -->
+        <meta name="google-site-verification" content="Xqk3CM1HJZEZCDa0nlXTaQcL9kkeXVTLsz7cPizoIcY" />
+        <meta name="p:domain_verify" content="1d7c7649ba06a69bd9073eab557193f0"/>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                    })(window,document,'script','dataLayer','GTM-KLN23RC');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144850694-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-144850694-1');
+        </script>
+    </head>
+
+    <body>
+        <div  id="main" style="margin: 0 0;" >
+            <!-- side bar -->
+            <div id="float-button">
+                <button class="hamburger hamburger--slider " type="button"  >
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner "></span>
+                    </span>
+                </button>  
+                <script>
+                    // Look for .hamburger
+                    var hamburger = document.querySelector(".hamburger");
+
+                    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+                    closeNav();
+                </script>
+
+            </div>
+
+
+
+
+            <script>
+                function openNav() {
+                    hamburger.classList.add("is-active");
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+
+                    document.getElementById("float-button").style.left = "170px";
+                }
+                function closeNav() {
+                    hamburger.classList.remove("is-active");
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft= "0";
+                    document.getElementById("float-button").style.left = "25px";
+                }
+            </script>
+            <div id="mySidenav" class="sidenav" style=" align-content: center">
+                <a href="index.html">
+                    <img  src="images/blue.png"  alt="Me" style="width:50%" id="profilepic"> </a>
+                <div style=" text-align: center; left: -10px">
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="w3-padding-16 w3-xxlarge "  >
+
+                    <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">
+                        <i class="fa fa-facebook-official  " id="socialicon" > </i>
+                    </a>
+
+                    <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  
+                        <i class="fa fa-instagram w3-hover-opacity " id="socialicon" ></i> </a> 
+
+                    <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p  "id="socialicon" ></i> </a>   
+
+                    <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity "id="socialicon" ></i> </a>
+
+                    <a style="text-decoration:none" href="https://www.youtube.com/channel/UC7dSbe4uyBm_2xoEsZxLung?subconfirmation=1" >  <i class="fa fa-linkedin "id="socialicon" ></i> </a>  
+
+                    <a style="text-decoration:none" href="https://www.youtube.com/channel/UC7dSbe4uyBm_2xoEsZxLung?subconfirmation=1" >  <i class="fa fa-youtube  "id="socialicon" ></i> </a>
+                </div>
+            </div>
+            <!-- end side bar-->
+
+
+
+            <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Objects &amp; Classes</title>
+                </head>
+                <body>
+                    <article id="7adbb11a-a05b-4646-beac-7ce46ad8316c" class="page sans">
+                        <header><h1 class="page-title">Objects &amp; Classes</h1></header><div class="page-body"><h1 id="e7be9282-a9ec-4f0c-8baf-6184124f71ae" class="">What is an object?</h1><p id="6f853aa3-0d63-4efe-9a55-e77985086310" class="">variable creates an instance of a object</p><p id="180a26e0-ca78-4ee1-a61a-27add06c0ae9" class="">so x = 5 creates x = instance of int class and value is 5</p><p id="63b61d73-e2a3-4cfc-939d-545a46f2e2fa" class="">classes allow us to have built in functions</p><p id="0f8ffdb1-42af-4e52-9e39-5d8e309ca63f" class="">e.g. x/4 or x+6</p><p id="ab21f5ae-d877-4846-a424-66876827493c" class="">y.strip() the strip is a method</p><p id="9fbd878f-40ba-4bb3-b0e8-574d8397cae7" class="">class int(object) where object is the value</p><p id="841f7a16-b1d4-4b61-af73-bfc13474013a" class="">why x.upper() doesnt work</p><p id="f88e59b2-f411-46e0-ac16-1493c257280f" class="">error: &#x27;int&#x27; object has no attribute &#x27;upper&#x27;. Because x is a object of int not string, there is no upper methods.</p><h1 id="a00a6c55-d10a-4c70-9d27-31e6e94e95fa" class="">Create a Class</h1><pre id="14a984aa-3207-4ab9-a623-76a006401b9b" class="code"><code>class Dog(object):
+    #we have to add methods
+    def __init__(self): #this is a method being declared,
+        pass</code></pre><p id="3718650f-c9c7-477a-8a85-e67fec2f8763" class="">Known as constructor method</p><p id="58412304-4144-42c9-b7e2-8f237d02926b" class="">__<strong>init__ must be used, and when called will be automatically run</strong></p><h3 id="09ae3cac-09dc-4f51-8af5-64c587804617" class="">Attributes and methods</h3><p id="91f310e8-0fd2-4db6-a82a-abc687aa5835" class=""><strong>methods </strong>are created with define and are like functions but must be called using a object.</p><p id="5584c6ca-775f-4ae7-b264-ce557d235011" class="">A<strong>ttributes variables that belong to a certain object. to create attribute you use the self keyword:</strong></p><pre id="4b3b88a5-1777-419b-9ea2-a429ea23c415" class="code"><code>class Dog(object):
+    #we have to add methods
+    def __init__(self,name): #this is a method being declared,
+        self.name = name
+    def speak(self):
+        print(&quot;Hi my name is &quot;, self.name)
+
+
+tim = Dog(&#x27;tim&#x27;)
+fred = Dog(&#x27;fred&#x27;)
+tim.speak()
+fred.speak()</code></pre><p id="596f44b4-c4af-4248-97cc-e588f464d7fb" class="">__init_ always runs</p><p id="c5309600-b045-43db-aafc-3bf68887e0c6" class="">there is a parameter in the init (name) so we must pass a parameter. self actually represents the instances. </p><p id="2f8e2290-6af6-4f0a-b157-70336a81a977" class="">_init__(self,name) and tim = Dog(&#x27;tim&#x27;) where self is tim and name is &#x27;tim&#x27;. so when we call <a href="http://self.name">self.name</a> we say <a href="http://tim.name">tim.name</a> = &#x27;tim&#x27; or whatever we put. same as fred, when we call it on fred, the self changes to fred and the output name changes.  so the self is almost like a id, when tim.speak is called and self.name is printed, it takes the id tim and searches for the name /what variable is stored in time and under name.</p><p id="6a74c66a-a43a-484a-a4fa-2e6c84c74504" class="">def speak(self) the self is what you call that function on eg the tim in tim.speak() this then is used/taken over to the <a href="http://self.name">self.name</a> and searches for tim and the name</p><pre id="c8318c17-7d4e-4f05-8641-37b54f2ac8a0" class="code"><code>#create a new method
+    def change_age(self,age):
+        self.age = age
+
+time.change_age(5) #this will change the age to 5</code></pre><p id="30755db2-f7f5-4c4c-8b46-0f27cd1ae704" class="">methods must have self.</p><pre id="e334a5be-5a02-4a56-a3e5-7cba0233a715" class="code"><code>print(tim.age) # will print 5</code></pre><p id="779b6254-71e3-473b-89e4-1d00745607a4" class="">We can access the attributes (age) of our object (tim) by calling the object and the attribute, it will return with data. When we do <a href="http://self.name">self.name</a> or self.list = [1,2,3] we are almost &#x27;appending&#x27; the values to &#x27;self&#x27; aka the object tim. so we can then call them later.</p><p id="01d49c7f-8c02-42e1-9cd1-527e3ab60655" class="">advantage, multiple objects of a class.</p><pre id="05ed5ca8-222c-4b3d-87db-b493233d93a2" class="code"><code>def addweight(self,weight):
+        self.weight = weight </code></pre><p id="0b90d721-063f-4d20-ae95-8c88fdf1a54e" class="">creates a new instance attribute that will be applied when the add weight command is ran. might cause error because it wants you to declare it in __init_ but you can do it &#x27;externally&#x27;.</p><pre id="e3cccd2e-d387-403d-8695-2df3d50beded" class="code"><code>tim.addeight(70)
+print(tim.weight)</code></pre><p id="80ec136e-e6dd-4a67-a6e6-963d182d5ed5" class="">If we printed fred.weight, it would come up with a error (dog has no attribute weight) as fred has no attribute weight as it only occurs when you call this function on the object.</p><h1 id="6febb65c-541a-427b-af72-26597121b4ad" class="">Inheritence</h1><pre id="715afb7f-ed24-4aa6-8885-726d12763dc7" class="code"><code>class cat(Dog): # means parent or super class which then is reduced to child</code></pre><p id="3cadfd26-14fb-42ee-8031-f599e551cf9a" class="">Class cat will inherit from dog. Meaning dog is the parent class and cat is the child task. But what will it inherit?</p><pre id="37cb1893-0d45-4e47-88f4-e0fa7dd44465" class="code"><code>class Dog(object):
+    #we have to add methods
+    def __init__(self,name,age1): #this is a method being declared,
+        self.name = name
+        self.age = age1
+
+    def speak(self):
+        print(&quot;Hi my name is &quot;, self.name, self.age)
+
+class cat(Dog): # means parent or super class which then is reduced to child
+    def __init__(self,name,age,colour):
+        super().__init__(name,age)
+        self.colour = colour
+
+tim = cat(&#x27;tim&#x27;,5, &#x27;blue&#x27;)
+tim.speak()</code></pre><p id="5c448a84-19fb-468c-8593-b3f5279c4f10" class="">When you write class cat(Dog) you inheirt all of the methods and attributes of that class. so tim.speak(). as speak is in dog class, which we inheirt from, it is carried on.</p><pre id="fc15167b-0b2b-45a8-b540-0f00e9c8a1ac" class="code"><code>super().__init__(name,age)</code></pre><p id="6d8b46fe-cde6-4cb0-a7e9-e4d6b85b8a25" class="">super class simply means dog class.  This runs the code <a href="http://self.name">self.name</a> and self.age for the cat class. However we can also overlook methods from the dog class. Lets add this to teh dog class:</p><pre id="55481134-8ffd-4110-84ae-e88a8054cc0e" class="code"><code>def talk(self):
+        print(&quot;bark&quot;)</code></pre><p id="b178261b-03fb-4cc1-9bab-e64e3a95a369" class="">When we run this, the dog class and cat class will both &#x27;bark&#x27;</p><p id="51ea74a4-6b88-4f38-9970-a4ffd6f86030" class="">Lets over look this for the cat class:</p><pre id="20edc178-09f5-45fc-803e-6a3bf9f05159" class="code"><code>def talk(self):
+        print(&quot;Meow&quot;)</code></pre><p id="64e1c0fb-f9c3-41d0-a42b-2cdc27c1648e" class="">This wont change the method for dog objects. aka object.talk() for dog would be bark.</p><p id="f025202f-6e4e-41be-b79b-f552c4ec62a6" class="">inhertience</p><p id="1a20d857-2a47-4af1-ac95-011a737014e0" class="">you want a super class that applies to a lot of classes, then inherit from there: </p><pre id="0033f82b-8cc9-4b0a-85ae-d09cbc76fe3d" class="code"><code>class vehicle(object):
+    def __init__(self,price,gas,colour):
+        self.price = price
+        self.gas = gas
+        self.colour = colour
+
+    def filluptank(self):
+        self.gas = 100
+    def emptytank(self):
+        self.gas = 0:
+    def gasleft(self):
+        return self.gas
+
+class car(vehicle):
+    def __init__(self,price,gas,colour, speed):
+        super().__init__(price,gas,colour)
+        self.speed=speed
+    def beep(self):
+        print(&quot;beep&quot;)
+
+
+class truck(vehicle):
+    def __init__(self,price,gas,colour, tyres):
+        super().__init__(price,gas,colour)
+        self.tyres=tyres
+    def beep(self):
+        print(&quot;Honk Honk&quot;)</code></pre><p id="65dc7067-68ed-4e2f-b149-c47e30a86550" class="">where car and vehicle still need attributes price, gas and colour, the beep is different and so it the attribute speed/tires</p><h1 id="cdb88655-62e8-4645-9920-5eda3f466157" class="">Overload methoeds</h1><pre id="35556303-2740-4719-ab42-dcbb2c55d94e" class="code"><code>class Point(object):
+    def __init__(self,x=0,y=0):
+        self.x=x
+        self.y=y
+        self.coords = (self.x,self.y)
+
+    def move(self,x,y):
+        self.x += x
+        self.y +=y
+
+p1 = Point(3,4)
+p2 = Point(3,2)
+p3 = Point(1,3)
+p4 = Point(0,1)</code></pre><p id="e380e064-d594-4faa-b08a-60bc806e5a1a" class="">Be able to add multiply and subtract points </p><p id="8bd0109f-dbea-43c4-9a2e-82ed23e2f01e" class="">p1 + p2</p><pre id="9d97f79e-9226-427e-89f4-3c6c570628b6" class="code"><code>def __add__(self,p):
+        return Point(self.x + p.x, self.y + p.y)</code></pre><p id="d0e7bc2d-2fc2-4605-8f79-538992c3cba0" class="">__add_ is a python command. P will be the point we are adding and we return the values of self.x + the new point. </p><p id="af772ea5-de89-4214-bafa-11e91347fc1b" class="">so p1 + p2, p2 becomes p and p1 becomes self</p><pre id="d4fe89a7-2b89-420f-96eb-6773f7a2501b" class="code"><code>def __sub__(self,p):
+        return Point(self.x - p.x, self.y - p.y)</code></pre><p id="4f44dd1e-8356-4225-b81a-9f2a6e6e96bc" class="">Subtract</p><pre id="823b2c9a-73ea-447f-b16d-e6790c0da50a" class="code"><code>def __mul__(self,p):
+        return self.x * p.x + self.y * p.y</code></pre><p id="4b4bddb6-d144-4311-adc3-906e05d51119" class="">As we are doing vectors, when we multiple two vectors, the returning value is there scalar product. So multiply x coords and add it to the y coords.</p><pre id="2610581a-3523-4b76-a104-90c8a3ac0b16" class="code"><code>p1 = Point(3,4)
+p2 = Point(3,2)
+p3 = Point(1,3)
+p4 = Point(0,1)
+p5 = p1 + p2
+p6 = p4 - p1
+p7 = p2 * p3
+print(p5,p6,p7)</code></pre><pre id="6a1e5158-1c4d-4e5f-9ad3-2da2b74c137e" class="code"><code>#Returning/output
+&lt;__main__.Point object at 0x0365B750&gt; &lt;__main__.Point object at 0x0365B770&gt; 9</code></pre><p id="673c5070-12c3-4e0f-886c-faf654e5c536" class="">not getting a coord value. This is the address in memory. We need a new method. str</p><pre id="8d3a6161-66c0-40cc-b099-097e0661cf2b" class="code"><code>def __str__(self):
+        return &quot;(&quot; + str(self.x) + &#x27;,&#x27; + str(self.y) +&#x27;)&#x27;</code></pre><p id="7f05d8e5-9a0e-42ad-bca2-fa73117b1d6a" class="">which will return the string value in the given format. </p><pre id="de8631f0-6a9e-441b-93b1-4bef405adb72" class="code"><code>(6,6) (-3,-3) 9</code></pre><p id="1f902dc0-f6d2-44a2-a217-5a317c22e74e" class="">When we run the add command, it search&#x27;s for a str method in the class, if it cannot find one, then it prints the memory location, not so useful. If it can then it runs it. On the str return, a string value must be returned, hence the str(self.x)</p><p id="f9b7044a-713f-44cc-b72a-491eba94d989" class="">Lets compare points:</p><p id="31604782-69d4-47b8-b005-6f12a9331170" class="">How are we going to compare the points? We will find the length from origin.</p><pre id="be5162e3-5271-4573-bb9a-e31d5cfaf520" class="code"><code>		def ___gt__(self,p): #greater than
+
+    def ___ge__(self,p): #greater than or equal to
+
+    def ___lt__(self,p): #less than
+
+    def ___le__(self,p): #less than or equal to
+
+    def __eq__(self,p): #equal to or ==</code></pre><p id="af13a363-39db-45f5-bc12-a9a9435a0cd5" class="">There are 5 different ways of comparing values.</p><p id="efb197fb-71ce-4983-9000-a74e0c3a5a01" class="">For this we need anther method: length to find the length</p><pre id="3c57c9a0-128d-401a-ab5a-c9e07e0f070f" class="code"><code>def length(self):
+        import math
+        return math.sqrt(self.x**2 + self.y**2)</code></pre><p id="38f2a4a0-59a3-4c7b-9ce3-247ffad57252" class="">where we import math to do the sqrt</p><p id="484671b2-f5d0-4d3c-9917-f79d115718aa" class="">For the freater than, we want to do:</p><pre id="294d1926-e2f4-4b94-9a31-196a66927552" class="code"><code>def length(self):
+        import math
+        return math.sqrt(self.x**2 + self.y**2)
+
+    def __gt__(self,p): #greater than
+        return self.length() &gt; p.length()</code></pre><p id="d4464576-32fe-4b9d-bdb8-66796517ca72" class="">where we return the first points length, then the p, lengths (being the second point) and then compare them.</p><pre id="e48b70be-473d-4735-80c5-9acc555db70d" class="code"><code>		def __ge__(self,p): #greater than or equal to
+        return self.length() &gt;= p.length()
+
+    def __lt__(self,p): #less than
+        return self.length() &lt; p.length()
+
+    def __le__(self,p): #less than or equal to
+        return self.length() &lt;= p.length()
+</code></pre><p id="bc7afb2b-f4ef-480c-b8c6-88a15c193f90" class="">We then do this for the rest . . .</p><p id="8b49a59c-2b35-4a4c-8dbf-380469f56f18" class="">but for the equal, if we follow what we did last time with the length, it can be glitchy and python has trouble with endless decimal numbers, therefore we will just compare each individual value:</p><pre id="b0139ace-21a3-4600-8c8c-369a85fce313" class="code"><code>def __eq__(self,p): #equal to or ==
+        return self.x == p.x and self.y == p.y</code></pre><p id="95291285-ca84-41eb-9084-69e563edae76" class="">Test them:</p><pre id="a897a846-8622-46b1-991b-4204b785c3f0" class="code"><code>print(p4 &gt; p2)
+print(p4 &lt; p2)
+print(p4=p2)</code></pre><pre id="0b5e29a7-b644-455d-8d20-e8918bfb8bdd" class="code"><code>False
+False
+True
+False</code></pre><h1 id="4e4d9b89-40b6-44fe-8917-af7aebbfc933" class="">Static Methods and Class Methods</h1><h3 id="ce139745-8917-4836-9e41-67a1fbbd188d" class="">Class variables: </h3><p id="334a805d-4bb7-4f78-a06e-b90b15cea93c" class="">create a regular variable: name = Jack</p><p id="d9755b5c-ad86-44e8-8f4f-c57421c28d1e" class="">global variable: defined at the top, e.g.</p><pre id="0d1d14a8-0c03-4378-987c-8bb965f58576" class="code"><code>class Dogs:
+    dogs = []
+
+    def __init__(self,name):
+        self.name = name</code></pre><p id="26095e87-3682-4316-b44e-3285212c62df" class="">reference that, you must be inside the class. All objects can reference that. to refernce that, you must use self.dogs</p><pre id="cc3c7603-0091-4418-9c2c-b0401022dc83" class="code"><code>self.dogs.append(self)</code></pre><p id="4f0bf0ac-a0f8-4a85-b553-a022f2462f2d" class="">This appends every dog object into the list dogs. This belongs to the class dogs, not objects. </p><pre id="b6005901-e4b7-419a-a54f-cd05f611006b" class="code"><code>tim.bark()
+print(Dogs.dogs)</code></pre><h3 id="b0114195-238b-432c-8f00-1cc016597852" class="">class variables</h3><p id="0d8f4819-4da1-41f5-9378-ec5c902ac6ae" class="">can be called on the class. still do tim.dogs but you dont have to have a instances (tim) to use it.</p><pre id="17332354-83e6-4454-9ca9-6bbc80e765d6" class="code"><code>@classmethod</code></pre><p id="22d37ed6-9ad1-42a3-a1dd-c9dafed22c5d" class="">This is a decorator and is used above. </p><pre id="284803c9-36aa-46e7-9915-74c3e4754efd" class="code"><code>@classmethod
+    def num_dogs(cls):
+        return len(cls.dogs)</code></pre><p id="932aad08-6ec3-4146-8330-f44e0216a603" class="">where cls is the name of the class. so dog.num_dogs(). so you can call it on the class not a instance. you can call it on a instances.</p><h3 id="09b6bf7c-e03f-4d5e-b4fb-992168884dbb" class="">Static methods</h3><p id="9a8c8eff-41b1-47a8-9c64-53ebcdea2542" class="">Dont need a class to be called. So it cannot be referenced anything within class. </p><pre id="e992769d-c237-4dc4-a3dc-2d3a8153b5bf" class="code"><code>@staticmethod
+    def bark(n):
+        &quot;&quot;&quot;barks n times&quot;&quot;&quot;
+        for _ in range(n):
+            print(&quot;Bark!&quot;)</code></pre><p id="97aeb68c-6613-4e27-899c-43c992b9fcac" class="">here we only pass what we want. </p><p id="fb1551f2-1a24-40dc-882b-7d34d35d365d" class="">To call bark without any objects.instances, we must first define where it is: so Dog. Then .bark and give it a number</p><pre id="7fe74db0-3436-43d2-a400-774dd084126e" class="code"><code>Dog.bark(5)</code></pre><p id="060b7c47-d4c4-48a9-aa7f-cb74c0bb933c" class="">In the method there is no self, or class. So you cant call anther class. It is just a function organized in a class.</p><pre id="f231a394-1d05-4626-a22d-d59e6cf0f961" class="code"><code>class Math:
+	#staticmethod
+	def add(x,x2):
+		reutrn x + x2
+
+math.add(1,2)</code></pre><p id="b225053d-c1ca-4e44-94d2-b61f0b7d9d54" class="">so you can now import math and use your functions.</p><p id="30ba4278-c8a0-4d5e-8253-679855e8a82c" class="">
+                        </p><h1 id="280884f2-9cbc-45cf-a036-88db83b3f1d8" class="">Private and Public Classes</h1><p id="2e8834d8-999e-43eb-8022-b8438bd4b675" class="">Private is for one file/ within something. </p><p id="a27331a0-c561-43ce-bd83-4fd08bdeec54" class="">public is available everywhere. Declares for all classes, any classes can edit this class.</p><pre id="54e647aa-0d56-4705-ad8f-54a21afed98c" class="code"><code>class _Private:
+    def__init__(self,name):
+        self.name = name</code></pre><p id="28eb79b9-ff00-4bc4-8b37-256217f43993" class="">is a private Class</p><pre id="9882a55d-19df-4e5a-8716-821921fe9710" class="code"><code>class NotPrivate:
+    def__init__(self,name):
+        self.name = name
+</code></pre><p id="1ea8ec8e-081c-48fa-9795-fa647af24d44" class="">Is not private. To make a private class, one must use 1 _ </p><p id="587e4be7-65c7-47e3-b076-d27ac2ddef49" class="">you can also create private methods with 1 underscore.</p><pre id="4ae738bd-08c0-4d58-accf-5d8e75286679" class="code"><code>import file
+from file import NotPrivate
+test = NotPrivate(&quot;time&quot;0
+text.display()</code></pre><p id="6828be85-1de3-4aed-84f9-047ae9e150d8" class="">This import can be achieved by</p><pre id="57a5072a-2896-4e33-97bc-883e15808ec8" class="code"><code>import file
+test = mod.NotPrivate(&quot;time&quot;0
+text.display()</code></pre><p id="899ea38c-f034-4840-850b-94107e9aa8e1" class="">output = hi</p><pre id="bb9a8ab3-f84b-43c5-a2ba-78547df4e7be" class="code"><code>text._display()</code></pre><p id="5616d3e4-1c0d-431b-836e-206115ffd8e1" class="">still outputs Hello.</p><p id="5eff0116-897f-4226-901c-f450d8d40925" class="">
+                        </p></div></article></body>
+
+
+
+
+        </div>
+    </body>
+
+</html>
