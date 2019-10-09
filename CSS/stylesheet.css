@@ -239,11 +239,7 @@ html {
     padding: 16px;
     margin-top: 60px
 }
-.whole{
-    height: inherit;
-    width: 30px;
-    
-}
+
 
 @media screen and (max-height: 450px) {
     .whole {width: 50%;}
@@ -585,6 +581,13 @@ display: flex;
   background-repeat: no-repeat;
     
   background-size: cover;
+}
+
+
+
+.whole{
+    width: 1500px;
+    
 }
 
 @media screen and (max-width: 720px) {
