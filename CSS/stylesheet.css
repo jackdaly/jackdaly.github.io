@@ -239,6 +239,17 @@ html {
     padding: 16px;
     margin-top: 60px
 }
+.whole{
+    height: inherit;
+    width: 30px;
+    
+}
+
+@media screen and (max-height: 450px) {
+    .whole {width: 50%;}
+    .whole a {font-size: 18px;}
+    
+}
 #float-button {
     z-index: 2;
     overflow: hidden;
@@ -256,6 +267,7 @@ html {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    
 }
 /* side bar */
 
@@ -565,6 +577,7 @@ display: flex;
   /* Position and center the image to scale nicely on all screens */
   /* Full height */
   height: 150%; 
+    width: inherit;
 
   /* Create the parallax scrolling effect */
 
@@ -572,4 +585,13 @@ display: flex;
   background-repeat: no-repeat;
     
   background-size: cover;
+}
+
+@media screen and (max-width: 720px) {
+    .hero-image {width: 75%;}
+    .id{width: 75%;}
+}
+@media screen and (min-width: 720px) {
+    .hero-image {width: 100%;}
+    .id{width: 100%;}
 }
