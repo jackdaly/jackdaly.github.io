@@ -34,15 +34,12 @@
         <itunes:category text="Comedy"> </itunes:category>
 
 
-
-
-
-
+        <!--
         <item>
-            <title>Episode 1</title>
-            <itunes:author>Luke</itunes:author>
+            <title>Are We CONSCIOUS Without LANGUAGE? (And More) - Not Your Normal Think #1</title>
+            <itunes:author>Luke and Jack</itunes:author>
 
-            <itunes:image href=""/>
+            <itunes:image href="https://jackdaly.github.io/Podcast/thumb.png"/>
             <enclosure url="https://www.instagram.com/notyournormal_official/EPISODE%201%20-%20Complete.mp3" length="47688007" type="audio/mp3"/>
             <link>https://www.instagram.com/notyournormal_official/EPISODE%201%20-%20Complete.mp3</link>
             <guid isPermaLink="false">186fad94fda23a7fb88b5e1186e91cb7f4a45347</guid>
@@ -50,9 +47,38 @@
             <itunes:duration>2402</itunes:duration>
 
         </item>
+-->
+        <item>
+            <title>Are We CONSCIOUS Without LANGUAGE? (And More) - Not Your Normal Think #1</title>
+            <description>This week we are discussing; "Do We Need Language To Be Conscious?" and "In a Post-Apocalypse world, is it more advantageous to control food, water, or an energy source?" In addition to this, we are also exploring the mysterious conspiracy of Cuban Sonic Weapons </description>
+            <itunes:summary>This week we are discussing; "Do We Need Language To Be Conscious?" and "In a Post-Apocalypse world, is it more advantageous to control food, water, or an energy source?" In addition to this, we are also exploring the mysterious conspiracy of Cuban Sonic Weapons. </itunes:summary>
+            <itunes:subtitle>This week we are discussing; "Do We Need Language To Be Conscious?" and "In a Post-Apocalypse world, is it more advantageous to control food, water, or an energy source?" In addition to this, we are also exploring the mysterious conspiracy of Cuban Sonic Weapons. </itunes:subtitle>
+            <itunesu:category itunesu:code="112" />
+            <enclosure url="https://www.jackdaly.github.io/Podcast/EPISODE%201%20-%20Complete.mp3" length="47688007" type="audio/mp3"/>
+            <guid>https://www.jackdaly.github.io/Podcast/EPISODE%201%20-%20Complete.mp3</guid>
+            <itunes:duration>20:47:47</itunes:duration>
+            <pubDate>Fri, 11 Oct 2019 20:47:27 +0300</pubDate>
+        </item>
+
+        <item>
+            <title>Should We EXTERMINATE Old People?? (And More) - Not Your Normal Think #2</title>
+            <description>This week we are discussing; "Should we allow humans to live more than 100 yrs old?" and "Why would aliens want to visit earth?" Once again, thank you for watching and make sure to check out our other Podcast Episodes as well as the Conspiracy Corner! </description>
+            <itunes:summary>This week we are discussing; "Should we allow humans to live more than 100 yrs old?" and "Why would aliens want to visit earth?" Once again, thank you for watching and make sure to check out our other Podcast Episodes as well as the Conspiracy Corner!</itunes:summary>
+            <itunes:subtitle>This week we are discussing; "Should we allow humans to live more than 100 yrs old?" and "Why would aliens want to visit earth?" Once again, thank you for watching and make sure to check out our other Podcast Episodes as well as the Conspiracy Corner! </itunes:subtitle>
+            <itunesu:category itunesu:code="112" />
+            <enclosure url="https://www.jackdaly.github.io/Podcast/episode2.mp3" length="1730" type="audio/mp3"/>
+            <guid>https://www.jackdaly.github.io/Podcast/episode2.mp3</guid>
+            <itunes:duration>20:47:47</itunes:duration>
+            <pubDate>Wed, 16 Oct 2019 20:47:27 +0300</pubDate>
+        </item>
+
+
 
     </channel>
 </rss>
+
+
+
 
 
 
