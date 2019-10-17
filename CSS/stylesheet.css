@@ -365,6 +365,7 @@ transition: 0.2s; /* Add a transition effect (when scrolling - and font size is 
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+    border-radius: 1vh;
 }
 
 .button5 {
