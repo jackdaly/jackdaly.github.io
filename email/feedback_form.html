@@ -3,7 +3,7 @@
 
 <h1>Feedback Form</h1>
 
-<form method="post" action="send_mail.php">
+<form action="https://formspree.io/jackdalydesigns@gmail.com" method="POST" >
     <p>
         <label>First Name
             <input type="text" name="first_name" required>
@@ -19,5 +19,7 @@
             <textarea name="comments" maxlength="500"></textarea>
         </label>
     </p>
-    <p><button>Submit the form</button></p>
+    <input type="submit" value="Send">
+    <input type="hidden" name="_subject"  value="Enter your subject here">
+    <input type="submit" name="_next"  value="thank_you.html">
 </form>
