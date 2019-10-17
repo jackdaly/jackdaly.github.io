@@ -1,73 +1,6 @@
 <!DOCTYPE html>
 <title>Feedback Form</title>	
 
-<h1>FORM SPREE</h1>
-<form action="https://formspree.io/jackdalydesigns@gmail.com" method="POST" >
-    <p>
-        <label>First Name
-            <input type="text" name="first_name" required>
-        </label> 
-    </p>
-    <p>
-        <label>Email 
-            <input type="email" name="email_address">
-        </label>
-    </p>
-    <p>
-        <label>Comments
-            <textarea name="comments" maxlength="500"></textarea>
-        </label>
-    </p>
-    <input type="submit" value="Send">
-    <input type="hidden" name="_subject"  value="Enter your subject here">
-    <input type="hidden" name="_next"  value="thank_you.html">
-</form>
-
-<h1>MAILTHIS FORM</h1>
-<form action="https://mailthis.to/jackdalydesigns@gmail.com" 
-      method="POST"> 
-    <input type="text" name="name" placeholder="Your name"> 
-    <input type="email" name="_replyto" placeholder="Your email"> 
-    <input type="submit" value="Send"> 
-</form> 
-
-
-
-
-
-
-
-<form action="https://mailthis.to/jackdalydesigns@gmail.com" method="POST" encType="multipart/form-data">
-    <h3>Contact Form (example)</h3>
-    <!-- Name -->
-    <input type="text" name="name" placeholder="Your name">
-    <!-- Email -->
-    <input type="email" name="email" placeholder="you@mail.com">
-
-    <!-- Textarea (Message) -->
-    <textarea name="message" placeholder="Enter your message here" style="height:90px"></textarea>
-    <!-- File attachments -->
-    <input type="file" name="file" placeholder="">
-
-    <!-- Optional (hidden) fields -->
-    <!-- Custom email Subject -->
-    <input type="hidden" name="_subject" value="Contact form submitted">
-    <!-- Custom email ReplyTo Address -->
-    <input type="hidden" name="_replyto" value="jackdalydesigns@gmail.com">
-    <!-- Redirect to a page after recaptcha -->
-    <input type="hidden" name="_after" value="https://jackdaly.github.io/email/thank_you">
-    <!-- Honeypot (to catch comment spam bots) -->
-    <input type="hidden" name="_honeypot" value="">
-    <!-- Apply a custom confirmation message on the second step -->
-    <input type="hidden" name="_confirmation" value="">
-
-    <!-- Submit Button -->
-    <input type="submit" name="submit" value="Submit Form" class="btn btn-primary">
-</form>
-
-
-
-
 <style>
     body {font-family: Arial, Helvetica, sans-serif;}
     * {box-sizing: border-box;}
@@ -117,9 +50,9 @@
 
             <label for="country">Service Interest</label>
             <select id="country" name="_subject">
-                <option value="australia">Comission</option>
-                <option value="canada">Fabrication</option>
-                <option value="usa">Other</option>
+                <option value="Comission">Comission</option>
+                <option value="Fabrication">Fabrication</option>
+                <option value="Other">Other</option>
             </select>
 
             <label for="subject">Subject</label>
