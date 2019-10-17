@@ -30,3 +30,37 @@
     <input type="email" name="_replyto" placeholder="Your email"> 
     <input type="submit" value="Send"> 
 </form> 
+
+
+
+
+
+
+
+<form action="https://mailthis.to/jackdalydesigns@gmail.com" method="POST" encType="multipart/form-data">
+  <h3>Contact Form (example)</h3>
+  <!-- Name -->
+  <input type="email" name="name" placeholder="Your name">
+  <!-- Email -->
+  <input type="email" name="email" placeholder="you@mail.com">
+
+  <!-- Textarea (Message) -->
+  <textarea name="message" placeholder="Enter your message here" style="height:90px"></textarea>
+  <!-- File attachments -->
+  <input type="file" name="file" placeholder="">
+
+  <!-- Optional (hidden) fields -->
+  <!-- Custom email Subject -->
+  <input type="hidden" name="_subject" value="Contact form submitted">
+  <!-- Custom email ReplyTo Address -->
+  <input type="hidden" name="_replyto" value="foo@bar.co">
+  <!-- Redirect to a page after recaptcha -->
+  <input type="hidden" name="_after" value="https://jackdaly.github.io/email/thank_you">
+  <!-- Honeypot (to catch comment spam bots) -->
+  <input type="hidden" name="_honeypot" value="">
+  <!-- Apply a custom confirmation message on the second step -->
+  <input type="hidden" name="_confirmation" value="">
+
+  <!-- Submit Button -->
+  <input type="submit" name="submit" value="Submit Form" class="btn btn-primary">
+</form>
