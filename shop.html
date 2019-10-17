@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <title>Jack Daly Designs</title>
+    <head>
+        <meta charset="UTF-8">
+
+
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+        <meta name=”description” content="Hybrid Designer, programmer and ginger, this is everything about me">
+
+
+        <!-- Global refernece -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Local refernece -->
+        <link href="CSS/stylesheet.css" rel="stylesheet" type="text/css">
+        <link href="CSS/hamburgers.css" rel="stylesheet">
+        <link href="CSS/w3.css" rel="stylesheet">
+
+        <link rel="icon" href="blue.png" type="image/gif" sizes="16x16">
+
+        <!-- google verify -->
+        <meta name="google-site-verification" content="Xqk3CM1HJZEZCDa0nlXTaQcL9kkeXVTLsz7cPizoIcY" />
+        <meta name="p:domain_verify" content="1d7c7649ba06a69bd9073eab557193f0"/>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                    })(window,document,'script','dataLayer','GTM-KLN23RC');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144850694-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-144850694-1');
+        </script>
+    </head>
+    <script>
+        (document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <div id="whole" >
+
+        <body onload="myFunction()">
+
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLN23RC"
+                              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+
+
+            <div id="loader"></div>
+            <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+                <body>
+
+
+
+
+                    <!-- !PAGE CONTENT! -->
+
+
+                    <div  id="main" style="margin: 0;" >
+
+                        <div  id="header" style="padding-top: 2%">
+
+
+
+                            <div id="float-button">
+                                <button class="hamburger hamburger--slider " type="button"  >
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner "></span>
+                                    </span>
+                                </button>  
+                                <script>
+                                    // Look for .hamburger
+                                    var hamburger = document.querySelector(".hamburger");
+
+                                    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+                                    closeNav();
+                                </script>
+
+                            </div>
+
+                            <!--     </div>-->
+
+
+
+
+
+
+                            <div class=""  >
+
+                                <!-- START OF HEADER -->
+
+
+                                <!-- side bar -->
+
+                                <script>
+                                    function openNav() {
+                                        hamburger.classList.add("is-active");
+                                        document.getElementById("mySidenav").style.width = "250px";
+                                        document.getElementById("main").style.marginLeft = "250px";
+
+                                        document.getElementById("float-button").style.left = "170px";
+                                    }
+
+                                    function closeNav() {
+                                        hamburger.classList.remove("is-active");
+                                        document.getElementById("mySidenav").style.width = "0";
+                                        document.getElementById("main").style.marginLeft= "0";
+                                        document.getElementById("float-button").style.left = "25px";
+                                    }
+
+                                </script>
+
+                                <div id="mySidenav" class="sidenav" style=" align-content: center">
+                                    <a href="index.html">
+                                        <img  src="images/blue.png"  alt="Me" style="width:50%" id="profilepic"> </a>
+                                    <div style=" text-align: center; left: -10px">
+                                        <a href="#about">About</a>
+                                        <a href="#portfolio">Portfolio</a>
+                                        <a href="#contact">Contact</a>
+                                    </div>
+                                    <div class="w3-padding-16 w3-xxlarge "  >
+
+                                        <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns">
+                                            <i class="fa fa-facebook-official  " id="socialicon" > </i>
+                                        </a>
+
+                                        <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  
+                                            <i class="fa fa-instagram w3-hover-opacity " id="socialicon" ></i> </a> 
+
+                                        <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p  "id="socialicon" ></i> </a>   
+
+                                        <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter w3-hover-opacity "id="socialicon" ></i> </a>
+
+                                        <a style="text-decoration:none" href="https://www.youtube.com/channel/UC7dSbe4uyBm_2xoEsZxLung?subconfirmation=1" >  <i class="fa fa-linkedin "id="socialicon" ></i> </a>  
+
+                                        <a style="text-decoration:none" href="https://www.youtube.com/channel/UC7dSbe4uyBm_2xoEsZxLung?subconfirmation=1" >  <i class="fa fa-youtube  "id="socialicon" ></i> </a>
+                                    </div>
+                                </div>
+                                <!-- -----------end side bar------------- -->
+                                
+
+                                                        <!-- Portfolio ection -->
+                        <h2 class="w3-center" id="portfolio" style="padding-bottom: 1%">Services</h2>
+                                <p>At this moment in time, all services are limited to Qatar</p>
+                        <div class="row" >
+                            
+                            <!-- ##### -->
+                       <h4 class="w3-center" id="portfolio" style="padding-bottom: 1%">What we offer</h2>     
+                            <div class= "containerproj">
+                                <div class="column" style="background-color:#aaa;border-radius: 25px 0px 0px 25px;">
+                                    <div class="imgcont" style="background-image:linear-gradient(
+                                                                to right,
+                                                                rgba(0, 0, 0, 0),
+                                                                rgba(0, 0, 0, 5)
+                                                                ), url('./images/fishtankcover.png')"></div>
+                                </div>
+                                <div class="column" style="border-radius: 0px 25px 25px 0px;">
+                                    <div class="textcont" style="" align="right">
+                                        <h1>Fabrication</h1>
+                                        <p style="color: aliceblue">Got a part that needs to be brought into reality?</p>
+                                        <div align="right" padding="1% 10%">
+                                            <button class="buttonproj"  ><a href="https://www.instructables.com/id/Smart-Tank/" style="text-decoration:none; ">Find Out More</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- ##### -->
+                            <div class="containerproj">
+                                <div class="column" style="border-radius: 25px 0px 0px 25px;">
+                                    <div class="textcont" style="" align="left">
+                                        <h1>CNC Dust Shoe </h1>
+                                        <p style="color: aliceblue">CNC Dust shoes are incredibly important when milling any material, especially materials that can be toxic or bad for the user's health. With this project, I aimed to combine functionality with aesthetics to create a highly functional product that looks aesthetically pleasing. The project was designed in Fusion 360 and showcases how highly functional tools can also take on pleasing form. The shoe can be moved up and down, adjusted with ease and the hoover extension can be removed for different additions.</p>
+                                        <div align="left" padding="1% 10%">
+                                            <button class="buttonproj"  ><a href="Coming_Soon.html" style="text-decoration:none; ">Find Out More</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="column" style="background-color:#aaa;border-radius: 0px 25px 25px 0px;">
+                                    <div class="imgcont" style="background-image:linear-gradient(
+                                                                to left,
+                                                                rgba(0, 0, 0, 0),
+                                                                rgba(0, 0, 0, 1)
+
+                                                                ), url('https://jackdaly.github.io/images/cncshoe (3).png') "></div>
+                                </div>
+                            </div>
+                            <!-- ##### -->
+                        </div>
+                                
+                                
+                                
+                                
+
+                        <!-- -------------------Footer------------------ -->
+                        <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large" style="border-radius: 0px 0px 25px 25px;"> 
+                            <a style="text-decoration:none" href="https://www.facebook.com/jackdalydesigns" >
+                                <i class="fa fa-facebook-official  " id="socialicon" > </i>
+                            </a>
+
+                            <a style="text-decoration:none" href="https://www.instagram.com/jackdalydesigns">  
+                                <i class="fa fa-instagram  " id="socialicon" ></i> </a> 
+
+                            <a style="text-decoration:none" href="https://www.pinterest.co.uk/jackdalydesigns">  <i class="fa fa-pinterest-p  "id="socialicon" ></i> </a>   
+
+                            <a style="text-decoration:none" href="https://twitter.com/JackDalyDesigns">  <i class="fa fa-twitter  "id="socialicon" ></i> </a>
+
+                            <a style="text-decoration:none" href="https://www.linkedin.com/in/jack-daly-65908a173/" >  <i class="fa fa-linkedin  "id="socialicon" ></i> </a>                                          <a style="text-decoration:none" href="https://www.youtube.com/channel/UC7dSbe4uyBm_2xoEsZxLung?subconfirmation=1" >  <i class="fa fa-youtube  "id="socialicon" ></i> </a> 
+                            │ Designed by Daly Industries
+
+                        </footer>
+
+
+                        <script>
+                            var myVar;
+
+                            function myFunction() {
+                                myVar = setTimeout(showPage, 0);
+                            }
+
+                            function showPage() {
+                                document.getElementById("loader").style.display = "none";
+                                document.getElementById("myDiv").style.display = "block";
+                            }
+                        </script>
+
+
+
+
+
+                    </div>
+
+                </body>
+            </div>
+        </body>
+    </div>
+</html>
